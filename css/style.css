@@ -46,6 +46,7 @@ html, body {
 }
 #navbar {
     width: 100%;
+    font-size: 1.3em;
     text-align: center;
     background-color: #333;
 
@@ -59,7 +60,10 @@ html, body {
 }
 #navbar li a{
     display: block;
-    padding: 12px;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
     color: white;
     text-decoration: none;
     
