@@ -1,20 +1,30 @@
 /* @font-face {
     font-family: 'Raleway';
-    src: local('Raleway') 
-    url(font/Raleway-Regular.ttf) format("truetype"),
-    url(font/Raleway-Bold.ttf) format("truetype");
-  } */
-  @font-face {
+    src:source('Raleway'),
+        url(../font/Raleway-Regular.ttf) format("truetype");
+    url(font/Raleway-Bold.ttf) format("truetype"); 
+    font-weight: normal;
+	font-style: normal;
+  }*/
+
+  @font-face{
+	font-family: 'Roboto';
+	src:source('Roboto'),
+		url(../font/Roboto_Regular.ttf) format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+/*   @font-face {
     font-family: Raleway;
     src: url("Raleway");
-  }
+  } */
 * {
     margin: 0;
     padding: 0;
 }
 
 html, body {
-    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .inner {
     margin: auto;
