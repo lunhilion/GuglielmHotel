@@ -1,19 +1,26 @@
-/* @font-face {
+@font-face {
     font-family: 'Raleway';
     src:source('Raleway'),
         url(../font/Raleway-Regular.ttf) format("truetype");
-    url(font/Raleway-Bold.ttf) format("truetype"); 
+    /* url(font/Raleway-Bold.ttf) format("truetype");  */
     font-weight: normal;
 	font-style: normal;
-  }*/
+  }
 
-  @font-face{
+/*   @font-face{
 	font-family: 'Roboto';
 	src:source('Roboto'),
-		url(../font/Roboto_Regular.ttf) format("truetype");
+		url("../font/Roboto_Regular.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
-}
+} */
+
+/* @font-face {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  } */
 /*   @font-face {
     font-family: Raleway;
     src: url("Raleway");
@@ -24,8 +31,9 @@
 }
 
 html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
+
 .inner {
     margin: auto;
     max-width: 1268px;
