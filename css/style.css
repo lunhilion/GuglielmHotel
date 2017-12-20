@@ -1,8 +1,12 @@
-@font-face {
+/* @font-face {
     font-family: 'Raleway';
     src: local('Raleway') 
     url(font/Raleway-Regular.ttf) format("truetype"),
     url(font/Raleway-Bold.ttf) format("truetype");
+  } */
+  @font-face {
+    font-family: Raleway;
+    src: url("Raleway");
   }
 * {
     margin: 0;
@@ -10,7 +14,7 @@
 }
 
 html, body {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
 }
 .inner {
     margin: auto;
