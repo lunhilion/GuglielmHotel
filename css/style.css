@@ -45,6 +45,10 @@ html, body {
     padding-left: 15%; 
 }
 
+.text h3{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
 dt{
     font-weight: bold;
 }
@@ -95,6 +99,15 @@ p{
     background-color: #f44336;
 }
 
+/* mie aggiunte Enric */
+.google-maps iframe{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3em;
+    padding-left: 3em;
+}
+/**/
+
 #footer {
     padding-bottom: 3em;
     background-color: black;
@@ -106,14 +119,14 @@ p{
     padding-bottom: 1em;
 }
 #social-footer {
-    padding: 1em;
+    padding: 0.5em;
     background-color: #333;
 }
 #social-footer img {
     padding-top: 0.1em;
     padding-bottom: 0.3em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     width: 3em;
 }
 
