@@ -43,7 +43,7 @@ html, body {
 }
 .tile {
     margin-top: 2em;
-    margin-bottom: 2em;
+    
     overflow: auto;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -54,9 +54,26 @@ html, body {
     padding-bottom: 1em;
 }
 
+.tile h2 {
+    text-align: center;
+    font-variant: small-caps; /*da vardare  se si vuole così*/
+}
+
+.map iframe{
+    width: 100%;
+    height: 25em;
+    border:none;
+
+}
 .column {
-    width: 33%;
+    width: 30%;
+    padding-left: 1em;
+    padding-right: 1em;
     float: left;
+}
+.column h3 {
+    margin-bottom: 1em;
+    text-align: center;
 }
 
 .BG-gray {
@@ -85,9 +102,6 @@ html, body {
     width: 12%;
 }
 
-.float {
-    float: left;
-}
 #navbar {
     width: 100%;
     font-size: 1.3em;
@@ -119,14 +133,6 @@ html, body {
     background-color: #f44336;
 }
 
-/* mie aggiunte Enric */
-.google-maps iframe{
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 3em;
-    padding-left: 3em;
-}
-/**/
 
 #footer {
     padding-bottom: 3em;
@@ -150,4 +156,13 @@ html, body {
     width: 3em;
 }
 
-
+/* ----css per Le_stanza.html  CSS3 ??---------*/
+.room{  
+width: 750px;
+-webkit-column-count: 2;
+-webkit-column-gap:25px;
+-moz-column-count: 2;
+-moz-column-gap:25px;
+column-count: 2;
+column-gap: 25px;
+}
