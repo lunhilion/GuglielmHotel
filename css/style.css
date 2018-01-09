@@ -65,6 +65,7 @@ html, body {
     border:none;
 
 }
+
 .column {
     width: 30%;
     padding-left: 1em;
@@ -81,6 +82,12 @@ html, body {
     height:250px;
 }
 
+.column1 {
+    width: 40%;
+    padding-left: 2em;
+    padding-right: 2em;
+    float: left;
+}
 
 .BG-gray {
     background-color: #f1f1f1;
