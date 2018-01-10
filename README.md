@@ -2,7 +2,7 @@
 
 
 ## Cose da fare
-- [ ] sistemare creazione dinamica menu
+- [x] sistemare creazione dinamica menu
 - [ ] finire di sistemare le pagine
 - [ ] caricare font locale
 - [ ] aggiungere box booking
