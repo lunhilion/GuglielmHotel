@@ -42,11 +42,9 @@ html, body {
     max-width: 1268px;
 }
 .tile {
-    margin-top: 2em;
-    
     overflow: auto;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 .tile h1 {
