@@ -228,6 +228,21 @@ html, body {
 	margin-top: 1em;
 }
 
+/* Stile per la pagina servizi.html */
+
+.infobox {
+	padding: 1em;
+}
+
+.infobox h3 {
+	text-align: left;
+}
+
+.infocontent:after {
+    	content: "";
+	display: table;
+    	clear: both;
+}
 
 #footer {
     padding-bottom: 3em;
