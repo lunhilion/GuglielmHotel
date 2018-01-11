@@ -206,6 +206,13 @@ html, body {
 	margin-top: 1em;
 }
 
+/* Stile per la pagina servizi.html */
+
+.infobox {
+	float: left;
+	width: 33%;
+	margin: 1em;
+}
 
 #footer {
     padding-bottom: 3em;
