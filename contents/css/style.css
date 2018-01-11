@@ -139,6 +139,73 @@ html, body {
     background-color: #f44336;
 }
 
+/*stile per la pagina dintorni.html*/
+#InternalNav {
+	text-align:center;
+}
+
+#InternalNav h2 {
+	padding-top: 2em;
+	padding-bottom: 1.5em;
+	font-size: 3em;
+}
+
+#InternalNav ul {
+	border-top: 1px solid #A9A9A9;	
+	border-bottom: 1px solid #A9A9A9;
+	font-size: 2em;
+	list-style: none;
+	margin-bottom: 20%;
+}
+
+#InternalNav a:link, a:visited {
+	text-decoration: none;
+	color: black; 
+}
+
+#InternalNav li:hover {
+	text-decoration: underline;
+}
+
+#InternalNav ul li {
+	margin: 1.5em;
+}
+
+.section_title {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+.section_title h2 {
+	font-size: 2em;
+}
+
+.leftbox {
+	float:left;
+	width: 45%;
+}
+
+.rightbox {
+	float:right;
+	width: 50%;
+}
+
+.rightbox ul {
+	list-style: none;
+}
+
+.rightbox h3 {
+	font-size: 1.5em;
+	margin-left: 5em;
+	margin-bottom: 1em;
+}
+
+.rightbox p {
+	margin-top: 1em;
+}
+
 
 #footer {
     padding-bottom: 3em;
