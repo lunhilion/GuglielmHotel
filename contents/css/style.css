@@ -214,12 +214,6 @@ html, body {
 	text-align: left;
 }
 
-.infocontent:after {
-    	content: "";
-	display: table;
-    	clear: both;
-}
-
 #footer {
     padding-bottom: 3em;
     background-color: black;
