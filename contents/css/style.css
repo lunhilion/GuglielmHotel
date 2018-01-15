@@ -55,6 +55,11 @@ html, body {
     text-align: center;
     padding-bottom: 1.5em;
 }
+.tile h3 {
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
 .tile  p{
     padding-bottom: 3em;
 }
@@ -77,9 +82,17 @@ html, body {
     text-align: center;
 }
 
-.column img{
-    width:350px; 
-    height:250px;
+.column-pari{
+    width: 45%
+    padding-left: 10em;
+    padding-right: 10em;
+    float: left;
+}
+
+.column-pari p{
+    margin-bottom: 0em;
+    margin-top: 0em;
+    text-align: center;
 }
 .column-sm {
     width: 20%;
