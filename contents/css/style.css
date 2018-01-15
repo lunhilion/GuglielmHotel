@@ -230,12 +230,12 @@ html, body {
 
 /* Stile per la pagina servizi.html */
 
-.infobox {
-	padding: 1em;
-}
-
 .infobox h3 {
 	text-align: left;
+}
+
+.infobox p {
+	line-height: 150%;
 }
 
 #footer {
