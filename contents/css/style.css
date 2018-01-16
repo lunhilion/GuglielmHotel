@@ -1,4 +1,3 @@
-//cesco è un cagarisi
 * {
     margin: 0;
     padding: 0;
@@ -81,9 +80,12 @@ html, body {
     padding-top: 2%;
     padding-bottom: 2%;
 }
+#header h1 {
+    font-size: 3em;
+}
 #info_box {
     padding-top: 1.3%;
-    padding-left: 16%;
+    padding-left: 20%;
 }
 #info_box h2 {
     padding-top: 0.5em;
@@ -112,7 +114,7 @@ html, body {
 
 #logo {
     float: left;
-    width: 12%;
+    width: 16%;
 }
 
 #navbar {
