@@ -173,8 +173,6 @@ html, body {
 }
 
 #InternalNav ul {
-	border-top: 1px solid #A9A9A9;	
-	border-bottom: 1px solid #A9A9A9;
 	list-style: none;
 	margin-bottom: 2%;
 }
@@ -205,8 +203,8 @@ html, body {
 
 .leftbox {
 	float:left;
-    width: 45%;
-    padding-bottom: 3em;
+    	width: 45%;
+   	padding-bottom: 3em;
 }
 
 .rightbox {
@@ -234,7 +232,7 @@ html, body {
 	text-align: left;
 }
 
-.infobox p {
+.infobox {
 	line-height: 150%;
 }
 
