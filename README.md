@@ -4,9 +4,10 @@
 ## Cose da fare
 - [x] sistemare creazione dinamica menu
 - [ ] finire di sistemare le pagine
-- [ ] caricare font locale
+- [x] caricare font locale
 - [ ] aggiungere box booking
-- [ ] aggiungere bottone booking
+- [x] aggiungere bottone booking
 - [ ] scrivere css mobile+stampa
-- [ ] aggiungere favicon
-
+- [x] aggiungere favicon
+- [ ] aggiungere tab index (?)
+- [ ] supporto per monitor
