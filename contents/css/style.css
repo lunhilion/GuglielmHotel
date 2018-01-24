@@ -12,7 +12,7 @@ html, body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
-p {
+p, ul {
 	font-family: Arial, Helvetica, sans-serif;
 }
 /* #booking-box img{
@@ -68,7 +68,7 @@ p {
     padding: 1em;
     width: 85%;
 }
-#booking-button {
+#booking-button, #topScrollButton {
     text-decoration: none;
     float: right;
     margin-top: 0.6em;
@@ -81,9 +81,18 @@ p {
     color: white;
     background-color: #f44336;
 }
-#booking-button:hover {
+#booking-button:hover, #topScrollButton:hover {
     background-color: #ba342b;
 }
+
+#topScrollButton {
+  display:none;
+  position:fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 99;
+}
+
 #content-box {
     display: block;
 }
@@ -123,8 +132,8 @@ p {
     float: left;
 }
 #left-box img{
-    width:550px; 
-    height:350px; 
+    width:550px;
+    height:350px;
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -198,7 +207,7 @@ h3{
     padding-right: 1.6em;
     color: white;
     text-decoration: none;
-    
+
 }
 .not-active:hover {
     background-color: black;
@@ -217,17 +226,18 @@ h3{
 	list-style: none;
 }
 
+#InternalNav a {
+  display: block;
+  padding: 1em;
+}
+
 #InternalNav a:link, a:visited {
 	text-decoration: none;
-	color: black; 
+	color: black;
 }
 
-#InternalNav li:hover {
+#InternalNav a:hover {
 	text-decoration: underline;
-}
-
-#InternalNav ul li {
-	margin: 1.5em;
 }
 
 .section_title {
@@ -243,8 +253,8 @@ h3{
 
 .leftbox {
 	float:left;
-    	width: 45%;
-   	padding-bottom: 3em;
+  width: 45%;
+  padding-bottom: 3em;
 }
 
 .rightbox {
@@ -269,15 +279,39 @@ h3{
 /* Stile per la pagina servizi.html */
 
 .infobox h3 {
+  margin-left: 2em;
 	text-align: left;
 }
 
-.infobox {
+.infobox ul {
+  border-top: 1px solid #DDD;
 	line-height: 150%;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  list-style: none;
+}
+
+.infobox li {
+  border-bottom: 1px solid #DDD;
+  padding: 0.1em 0em 0.1em;
+}
+
+.infobox p {
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  padding:0.5em 0em 0.5em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+
+.infobox img {
+  float: left;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 #footer {
-    padding-bottom: 3em;
+    padding-bottom: 7em;
     background-color: black;
     text-align: center;
     color: #777;
