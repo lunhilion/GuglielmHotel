@@ -12,7 +12,7 @@ html, body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
-p, ul {
+p, ul, span {
 	font-family: Arial, Helvetica, sans-serif;
 }
 /* #booking-box img{
@@ -145,8 +145,9 @@ p, ul {
     margin-left: 18%;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
+
 .text-justify {
     text-align: justify;
 }
@@ -216,6 +217,10 @@ h3{
     background-color: #f44336;
 }
 
+a:link, a:visited {
+  color: black;
+}
+
 /*stile per la pagina dintorni.html*/
 #InternalNav {
 	text-align: center;
@@ -251,14 +256,19 @@ h3{
 	font-size: 2em;
 }
 
+.section_title img {
+  height: 15em;
+}
+
 .leftbox {
 	float:left;
   width: 45%;
   padding-bottom: 3em;
+  height: 350px;
 }
 
 .rightbox {
-	float:right;
+  margin-left: 50%;
 	width: 50%;
 }
 
@@ -274,6 +284,14 @@ h3{
 
 .rightbox p {
 	margin-top: 1em;
+}
+
+.rightbox a {
+  float:right;
+}
+
+.rightbox ul a, .rightbox p a {
+  float:none;
 }
 
 /* Stile per la pagina servizi.html */
@@ -308,6 +326,34 @@ h3{
   float: left;
   height: 1.5em;
   width: 1.5em;
+}
+
+.contactbox {
+  width: 45%;
+  float: left;
+  margin: 1em;
+  text-align: center;
+}
+
+.contactbox h3 {
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
+
+.contactbox span {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.contactbox img {
+  height: 12em;
+}
+
+#phone-img {
+  height: 10em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 #footer {
