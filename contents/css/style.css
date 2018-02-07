@@ -47,7 +47,6 @@ p, ul, span {
 
 #booking-button-camera {
     text-decoration: none;
-    float: center;
     margin-top: 5em;
     margin-bottom: 5em;
     padding-top: 1em;
@@ -314,25 +313,20 @@ a:link, a:visited {
   padding: 0.1em 0em 0.1em;
 }
 
-.infobox p {
-  border-top: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
-  padding:0.5em 0em 0.5em;
-  margin-left: 1em;
-  margin-bottom: 2em;
-}
-
 .infobox img {
   float: left;
   height: 1.5em;
   width: 1.5em;
 }
 
+/*Stile per la pagina contatti.html*/
+
 .contactbox {
   width: 45%;
   float: left;
   margin: 1em;
   text-align: center;
+  border: 1px solid #DDD;
 }
 
 .contactbox h3 {
@@ -340,10 +334,20 @@ a:link, a:visited {
   padding-bottom: 1em;
 }
 
+
 .contactbox span {
   font-size: 1.2em;
   margin-bottom: 1em;
   display: block;
+}
+
+#tel-link {
+  pointer-events: none;
+  cursor: default;
+}
+
+#mail-link span {
+  text-decoration: underline;
 }
 
 .contactbox img {
