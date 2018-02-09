@@ -364,11 +364,14 @@ a:link, a:visited {
     padding-bottom: 7em;
     background-color: black;
     text-align: center;
-    color: #777;
 }
 #footer p {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    color: #777;
+}
+#footer a {
+    color: #494949;
 }
 #social-footer {
     padding: 0.5em;
