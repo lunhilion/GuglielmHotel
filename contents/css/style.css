@@ -57,6 +57,22 @@ p, ul, span {
     color: white;
     background-color: #f44336;
 }
+span.prenota{
+  font-size: 13px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+}
+span.costo{
+  font-size: 21px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+span.camera{
+  font-size: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
 #booking-form label {
     display: inline-block;
