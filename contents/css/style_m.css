@@ -17,6 +17,10 @@
   display: none;
 }
 
+#topScrollButton {
+  bottom:1em;
+}
+
 #booking-box {
   background-image: none;
   border-bottom: 1px solid #DDD;
@@ -132,4 +136,29 @@
 
  .contactbox img {
    height: 15em;
+ }
+
+ #prenotation-box, #note-box, #booking-submit-button {
+   font-size: 2em;
+ }
+
+ .select-box {
+   padding: 0;
+ }
+
+ #note-box {
+   width: 70%;
+ }
+
+ #note-box h3 {
+   text-align: center;
+   padding-left: 0;
+ }
+
+ #booking-submit-button {
+   display: block;
+   font-size: 3em;
+   float: none;
+   margin:auto;
+   margin-bottom: 2em;
  }
