@@ -70,13 +70,13 @@ p, ul, span {
 #booking-button, #topScrollButton {
     text-decoration: none;
     float: right;
-    margin-top: 0.6em;
-    margin-right: 1em;
+    margin-top: 0.5em;
+    margin-right: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 1.6em;
     padding-right: 1.6em;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: white;
     background-color: #f44336;
 }
@@ -164,10 +164,10 @@ p, ul, span {
 #header h1 {
     font-size: 3em;
 }
-#info_box {
-    padding-top: 1.3%;
-    padding-left: 20%;
+#home-link {
+  text-decoration: none;
 }
+
 #info_box h2 {
     padding-top: 0.5em;
 }
@@ -182,12 +182,13 @@ h3{
 
 #logo {
     float: left;
-    width: 16%;
+    width: 10em;
+    height: 6em;
+    padding-right: 1em;
 }
 
 #navbar {
     width: 100%;
-    font-size: 1.3em;
     text-align: center;
     background-color: #333;
 
@@ -200,6 +201,7 @@ h3{
     float: left;
 }
 #navbar li a{
+    font-size: 1.3em;
     display: block;
     padding-top: 0.9em;
     padding-bottom: 0.9em;
@@ -247,8 +249,11 @@ a:link, a:visited {
 .section_title {
 	text-align: center;
 	font-size: 1.5em;
-	margin-top: 3em;
 	margin-bottom: 3em;
+}
+
+#Cosa_visitare {
+  margin-top: 3em;
 }
 
 .section_title h2 {
@@ -260,10 +265,19 @@ a:link, a:visited {
 }
 
 .leftbox {
+  padding-top:33%;
 	float:left;
   width: 45%;
-  padding-bottom: 3em;
-  height: 350px;
+  position:relative;
+}
+
+.leftbox img {
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
 }
 
 .rightbox {
@@ -324,9 +338,10 @@ a:link, a:visited {
 .contactbox {
   width: 45%;
   float: left;
-  margin: 1em;
+  margin: 1%;
   text-align: center;
   border: 1px solid #DDD;
+  margin-bottom: 4em;
 }
 
 .contactbox h3 {
@@ -334,8 +349,8 @@ a:link, a:visited {
   padding-bottom: 1em;
 }
 
-
 .contactbox span {
+  text-decoration: none;
   font-size: 1.2em;
   margin-bottom: 1em;
   display: block;

@@ -1,0 +1,87 @@
+#logo {
+  width: 25%;
+}
+
+#info_box h1 {
+  text-align: center;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+#info_box h2 {
+  display: none;
+}
+#booking-button {
+  display: none;
+}
+
+#booking-box {
+  background-image: none;
+  border-bottom: 1px solid #DDD;
+  padding: 0;
+  overflow: auto;
+}
+
+#booking-form {
+  margin: auto;
+  width: 70%;
+  font-size: 2em;
+}
+
+#booking-form input {
+  font-size: 1em;
+}
+
+#booking-form button {
+  margin-left: 50%;
+}
+
+#navbar {
+  overflow: auto;
+}
+
+#navbar ul li {
+  float: none;
+}
+
+#navbar li a {
+  padding: 2em;
+}
+
+#topScrollButton {
+  font-size: 2em;
+}
+
+.column {
+  float: none;
+  margin: auto;
+  width: 70%;
+}
+
+.column p {
+  border-bottom: 1px solid #DDD;
+}
+
+.leftbox {
+  width: 70%;
+  height: 400px;
+  display: block;
+  float: none;
+  margin: auto;
+}
+
+.rightbox {
+  width: 70%;
+  margin: auto;
+}
+
+.infobox {
+  font-size: 1.5em;
+}
+
+#tel-link {
+  pointer-events: all;
+}
+
+ #tel-link span {
+   text-decoration: underline;
+ }
