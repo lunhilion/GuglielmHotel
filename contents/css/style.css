@@ -67,7 +67,7 @@ p, ul, span {
     padding: 1em;
     width: 85%;
 }
-#booking-button, #topScrollButton {
+#booking-button, #topScrollButton, #booking-submit-button {
     text-decoration: none;
     float: right;
     margin-top: 0.5em;
@@ -82,6 +82,17 @@ p, ul, span {
 }
 #booking-button:hover, #topScrollButton:hover {
     background-color: #ba342b;
+}
+
+#booking-submit-button {
+  border-style: none;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#booking-submit-button:hover {
+  background-color: #ba342b;
+  cursor: pointer;
 }
 
 #topScrollButton {
@@ -126,8 +137,8 @@ p, ul, span {
 }
 .column {
     width: 30%;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 1%;
+    padding-right: 1%;
     float: left;
 }
 #left-box img{
@@ -373,6 +384,41 @@ a:link, a:visited {
   height: 10em;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+/*stile per la pagina prenota*/
+#prenotation-box input {
+  font-size: 1.2em;
+  padding: 0.4em;
+  width: 90%;
+  margin-bottom: 1em;
+}
+
+.select-box {
+  text-align: center;
+}
+
+.select-box select {
+  padding: 0.2em;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+#note-box {
+  width: 50%;
+  margin-bottom: 3em;
+}
+
+#note-box h3 {
+  text-align: left;
+  padding-left: 3em;
+  font-size: 1.3em;
+}
+
+#note-box ul {
+  list-style: none;
+  line-height: 1.5em;
 }
 
 #footer {
