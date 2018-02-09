@@ -7,12 +7,12 @@ CREATE TABLE amministratori(
 CREATE TABLE appartamenti(
     nStanza varchar(4) primary key,
     nomeStanza varchar(100) not null,
-    maxPersone tinyint,
-    /*forse "tipoStanza"*/
+    maxPersone tinyint
 );
 CREATE TABLE prenotazioni(
     id int unsigned auto_increment primary key,
     nomeUtente varchar(15) not null,
+    email varchar(50) UNIQUE not null,
     nPersone tinyint unsigned,
     data_arrivo date,
     data_partenza date,
@@ -33,9 +33,6 @@ CREATE TABLE prezzi_disponibilita(
 INSERT INTO `amministratori` (`nome`, `email`, `password`) VALUES
 ('Enrico', 'e.sanguin@gmail.com', '743c3e86bedbe9772dadf2e6ea374da9');
 
-INSERT INTO `prenotazioni` (`nomeUtente`, `nPersone`, `data_arrivo`, `data_partenza`, `nStanza`) VALUES
-('carlo', '1', '2016-01-03', '2016-02-02', '1A');
-
 INSERT INTO `appartamenti` (`nStanza`, `nomeStanza`, `maxPersone`) VALUES
 ('1A', 'Camera Singola Classica', '1'),
 ('2B', 'Camera Doppia Classica', '2'),
@@ -47,3 +44,7 @@ INSERT INTO `prezzi_disponibilita` (`nStanza`, `da`, `a`, `costoGiornaliero`) VA
 ('2B','2016-06-16','2016-12-31','40'),
 ('3C','2016-12-12','2017-12-12','80'),
 ('4D','2016-12-12','2017-12-12','100');
+
+INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `nPersone`, `data_arrivo`, `data_partenza`, `nStanza`) VALUES
+('Carlo', 'carlo@gmail.com', '1', '2016-01-03', '2016-02-02', '1A'),
+('Giuseppe', 'giuseppe@gmail.com', '2', '2016-01-03', '2016-02-02', '2B');

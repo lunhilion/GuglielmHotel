@@ -445,3 +445,18 @@ a:link, a:visited {
     padding-right: 1.5em;
     width: 3em;
 }
+#tab-prenotazioni {
+    text-align: center;
+    margin-left: 23%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+}
+#tab-prenotazioni th {
+    background-color: #f1f1f1;
+    padding: 1em;
+
+}
+#tab-prenotazioni td {
+    padding: 0.4em;
+    border-bottom: 1px solid #ddd;
+}
