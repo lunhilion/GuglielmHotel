@@ -74,17 +74,23 @@ function BuildPage($title,$content,$array=0) {
     
 }
 function isLogin() {
-    if(isset($_SESSION['adminOnline']))
-        return true;
+    if(isset($_SESSION['adminOnline'])) {
+        if($_SESSION['adminOnline']==1)
+            return true;
+        else
+            return false;
+    }
     else
         return false;
 }
 
 function isAdmin($email,$pwd) {
-    if(isset($email) && isset($pwd)){
-        return connection::QueryRead("SELECT nome FROM amministratori WHERE email='$email' AND password=MD5('$pwd')");
-    }
-    return false;
+        $res=connection::QueryRead("SELECT nome FROM amministratori WHERE email='$email' AND password=MD5('$pwd')");
+        $row=mysqli_fetch_row($res);
+        if($row)
+            return true;
+        else
+            return false;
 }
 
 function getAdminName($email,$pwd) {
@@ -97,5 +103,41 @@ function getPrenotazioni() {
     $result = connection::QueryRead("SELECT * FROM prenotazioni");
     return $result;
 
+}
+
+function formattaData($string) {
+    $date = explode("-", $string);
+    $result = $date[2] . "-" . $date[1] . "-". $date[0];
+    return $result;
+}
+function getMaxPersone($appartamento) {
+    $result = connection::QueryRead("SELECT maxPersone FROM appartamenti WHERE nStanza='$appartamento'");
+    $row = mysqli_fetch_row($result);
+    return $row[0];
+}
+
+function checkData($string) {
+    $date = explode("-", $string);
+    if(sizeof($date) >= 3) {
+        return checkdate($date[1], $date[0], $date[2]);
+    }
+    else
+        return false;	
+}
+
+function checkDatas($stringda,$stringa){
+    $da = new DateTime($stringda);
+    $a = new DateTime($stringa);
+    return $a>$da;
+}
+
+function checkDateLibere($data_inizio,$data_fine,$appartamento) {
+    //false il periodo è ok, true il periodo è occupato
+    $query = "SELECT * FROM prenotazioni 
+    WHERE (('$data_inizio' BETWEEN data_arrivo AND data_partenza) 
+    OR (data_arrivo BETWEEN '$data_inizio' AND '$data_fine')) 
+    AND nStanza = '$appartamento'";
+    $result = connection::QueryRead($query);
+    return (mysqli_fetch_row($result));
 }
 ?>
