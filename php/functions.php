@@ -10,7 +10,8 @@ function PrepareMenu($title) {
         'Le nostre camere'=>'camere.php',
         'Attorno a noi'=>'dintorni.php',
         'I nostri servizi'=>'servizi.php',
-        'Contattaci'=>'contatti.php'
+        'Contattaci'=>'contatti.php',
+        'Prenota'=>'prenota.php'
     );
     $menu='<ul class="inner">';
     foreach($menuEntry as $index=>$link) {
