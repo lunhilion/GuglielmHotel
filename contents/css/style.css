@@ -44,10 +44,11 @@ p, ul, span {
     background-color: #f44336;
     border: none;
 }
+/* --------camere--------*/
 
 #booking-button-camera {
     text-decoration: none;
-    margin-top: 5em;
+    margin-top: 4em;
     margin-bottom: 5em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -57,7 +58,40 @@ p, ul, span {
     color: white;
     background-color: #f44336;
 }
-
+span.prenota{
+  display: block;
+  font-size: 13px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+}
+span.costo{
+  font-size: 21px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+span.camera{
+  
+  font-size: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.posti img{
+  width: 18px;
+  height: 18px;
+  padding-right: 0.5em;
+  padding-left: 1em;
+}
+.posti{
+    float: left;
+    font-size: 1.4em;
+    padding-left: 1em;
+    padding-right: 2em;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
 #booking-form label {
     display: inline-block;
     padding-top: 0.5em;
@@ -90,7 +124,7 @@ p, ul, span {
   margin-bottom: 2em;
 }
 
-#booking-submit-button:hover, #booking-form button:hover {
+#booking-submit-button:hover, #booking-form-button:hover {
   background-color: #ba342b;
   cursor: pointer;
 }
