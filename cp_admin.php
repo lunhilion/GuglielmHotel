@@ -8,13 +8,14 @@
         $res=getPrenotazioni();
         while($row=mysqli_fetch_row($res)) {
             $mod['{list}'] = $mod['{list}']. '<tr>
-            <td headers="c1">'.$row[5].'</td>
+            <td headers="c1">'.$row[6].'</td>
             <td headers="c2">'.$row[1].'</td>
             <td headers="c3">'.$row[2].'</td>
-            <td headers="c4" axis="data da">'.$row[3].'</td>
-            <td headers="c5" axis="data a">'.$row[4].'</td></td>
+            <td headers="c4" axis="data da">'.$row[4].'</td>
+            <td headers="c5" axis="data a">'.$row[5].'</td></td>
             </tr>';  
         }
+        
     }
     else {
         $content="contents/login_form.html";

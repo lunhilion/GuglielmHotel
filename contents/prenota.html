@@ -1,26 +1,28 @@
 <div class="tile">
 	<div class="inner">
 		<h2>PRENOTA</h2>
+		{errori}
 	</div>
 </div>
 <div class="tile BG-gray"id="prenota-title">
 <div class="inner" id="prenotation-box">
-		<form class="column" method="GET">
+		<form class="column" method="POST">
 				<h3> Quanto vorresti soggiornare qui? </h3>
 				<label>Check-In</label><br>
-				<input class="column" type="text" name="check-in" placeholder="GG MM AAAA"><br>
+				<input class="column" type="text" name="check-in" placeholder="GG MM AAAA" {check-in}><br>
 				<label>Check-Out</label><br>
-				<input class="column" type="text" name="check-out" placeholder="GG MM AAAA"><br>
-		</form>
+				<input class="column" type="text" name="check-out" placeholder="GG MM AAAA" {check-out}><br>
 			<div class="column select-box">
 				<h3> Che stanza vuoi? </h3>
 				<select name="TipoStanza">
-				<option value="1" selected> Singola classica </option>
-				<option value="2"> Doppia classica </option>
-				<option value="3"> Superior </option>
-				<option value="4"> Suite </option>
+				<option value="1A" selected> Singola classica </option>
+				<option value="2B"> Doppia classica </option>
+				<option value="3C"> Superior </option>
+				<option value="4D"> Suite </option>
 			</select>
 			</div>
+			<button type="submit" name="prenota" value="prenota" id="booking-submit-button">INVIA LA PRENOTAZIONE</button>
+		</form>
 </div>
 </div>
 <div class="tile">
@@ -34,6 +36,5 @@
 				<li> <strong>INFO</strong>: per chiarimenti o esigenze particolari, contattateci a <a href="contatti.php#contatti-title"> questa pagina </a> </li>
 			</ul>
 		</div>
-		<button id="booking-submit-button">INVIA LA PRENOTAZIONE</button>
 	</div>
 </div>
