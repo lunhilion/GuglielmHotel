@@ -21,6 +21,10 @@
   bottom:1em;
 }
 
+#home-link {
+  margin-right: 1em;
+}
+
 #booking-box {
   background-image: none;
   border-bottom: 1px solid #DDD;
