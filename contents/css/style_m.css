@@ -21,6 +21,10 @@
   bottom:1em;
 }
 
+#home-link {
+  margin-right: 1em;
+}
+
 #booking-box {
   background-image: none;
   border-bottom: 1px solid #DDD;
@@ -138,7 +142,7 @@
    height: 15em;
  }
 
- #prenotation-box, #note-box, #booking-submit-button {
+ #prenotation-box, #note-box #booking-submit-button {
    font-size: 2em;
  }
 
@@ -148,6 +152,9 @@
 
  #note-box {
    width: 70%;
+   margin: auto;
+   font-size: 2em;
+   margin-bottom: 2em;
  }
 
  #note-box h3 {
@@ -157,8 +164,38 @@
 
  #booking-submit-button {
    display: block;
-   font-size: 3em;
    float: none;
    margin:auto;
    margin-bottom: 2em;
+   font-size: 3em;
  }
+
+/* -----bottone prenotazione camera */
+.posti{
+    display: none;
+}
+span.prenota{
+  font-size: 13px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+}
+span.costo{
+  
+  font-size: 25px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+span.camera{
+  
+  font-size: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#booking-button-camera {
+    text-decoration: none;
+    margin.left: 0em;
+    margin-right: 1em;
+    font-size: 1em;
+    color: white;
+    background-color: #f44336;
