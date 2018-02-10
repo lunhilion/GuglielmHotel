@@ -10,15 +10,26 @@ function PrepareMenu($title) {
         'Le nostre camere'=>'camere.php',
         'Attorno a noi'=>'dintorni.php',
         'I nostri servizi'=>'servizi.php',
-        'Contattaci'=>'contatti.php'
+        'Contattaci'=>'contatti.php',
+        'Prenota'=>'prenota.php'
     );
     $menu='<ul class="inner">';
     foreach($menuEntry as $index=>$link) {
         if($index==$title) {
+          if($link=='prenota.php'){
+            $menu=$menu.'<li id="naventry-prenota"><a class="active">'.$index.'</a></li>';
+          }
+          else{
             $menu=$menu.'<li><a class="active">'.$index.'</a></li>';
+          }
         }
         else {
-            $menu=$menu.'<li><a class="not-active" href="'.$link.'">'.$index.'</a></li>';            
+          if($link=='prenota.php'){
+            $menu=$menu.'<li id="naventry-prenota"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+          }
+          else{
+            $menu=$menu.'<li><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+          }
         }
     }
     $menu=$menu.'</ul>';
@@ -37,7 +48,7 @@ function PrepareHeader($title) {
 function PrepareContent($modification,$content) {
     $page = file_get_contents($content);
     foreach($modification as $tag=>$value){
-         $page = str_replace($tag,$value,$page);       
+         $page = str_replace($tag,$value,$page);
     }
     return $page;
 }
@@ -55,7 +66,7 @@ function PrepareFooter($title) {
     $footer=str_replace('{cpanel-btn}',$btn,$footer);
     return $footer;
 }
-    
+
 function BuildPage($title,$content,$array=0) {
     $page=file_get_contents("contents/structure.html");
     $page=str_replace('{title}',$title,$page);
@@ -63,7 +74,7 @@ function BuildPage($title,$content,$array=0) {
     $page=str_replace('{header}',$header,$page);
     $navbar=PrepareMenu($title);
     $page=str_replace('{navbar}',$navbar,$page);
-    if($array==1) 
+    if($array==1)
         $body=$content;
     else
         $body=file_get_contents($content);
@@ -71,7 +82,7 @@ function BuildPage($title,$content,$array=0) {
     $footer=PrepareFooter($title);
     $page=str_replace('{footer}',$footer,$page);
     echo $page;
-    
+
 }
 function isLogin() {
     if(isset($_SESSION['adminOnline'])) {
@@ -122,7 +133,7 @@ function checkData($string) {
         return checkdate($date[1], $date[0], $date[2]);
     }
     else
-        return false;	
+        return false;
 }
 
 function checkDatas($stringda,$stringa){
@@ -133,9 +144,9 @@ function checkDatas($stringda,$stringa){
 
 function checkDateLibere($data_inizio,$data_fine,$appartamento) {
     //false il periodo è ok, true il periodo è occupato
-    $query = "SELECT * FROM prenotazioni 
-    WHERE (('$data_inizio' BETWEEN data_arrivo AND data_partenza) 
-    OR (data_arrivo BETWEEN '$data_inizio' AND '$data_fine')) 
+    $query = "SELECT * FROM prenotazioni
+    WHERE (('$data_inizio' BETWEEN data_arrivo AND data_partenza)
+    OR (data_arrivo BETWEEN '$data_inizio' AND '$data_fine'))
     AND nStanza = '$appartamento'";
     $result = connection::QueryRead($query);
     return (mysqli_fetch_row($result));

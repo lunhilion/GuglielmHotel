@@ -77,6 +77,10 @@
   font-size: 2.5em;
 }
 
+#naventry-prenota {
+  display:block;
+}
+
 #topScrollButton, #booking-button-camera {
   font-size: 2.5em;
 }

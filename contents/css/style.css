@@ -227,8 +227,12 @@ h3{
     padding-right: 1.6em;
     color: white;
     text-decoration: none;
-
 }
+
+#naventry-prenota {
+  display:none;
+}
+
 .not-active:hover {
     background-color: black;
 }
