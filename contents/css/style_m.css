@@ -142,7 +142,7 @@
    height: 15em;
  }
 
- #prenotation-box, #note-box, #booking-submit-button {
+ #prenotation-box, #note-box #booking-submit-button {
    font-size: 2em;
  }
 
@@ -152,6 +152,9 @@
 
  #note-box {
    width: 70%;
+   margin: auto;
+   font-size: 2em;
+   margin-bottom: 2em;
  }
 
  #note-box h3 {
@@ -161,8 +164,8 @@
 
  #booking-submit-button {
    display: block;
-   font-size: 3em;
    float: none;
    margin:auto;
    margin-bottom: 2em;
+   font-size: 3em;
  }
