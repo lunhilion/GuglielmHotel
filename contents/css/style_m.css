@@ -146,7 +146,7 @@
    height: 15em;
  }
 
- #prenotation-box, #note-box #booking-submit-button {
+ #prenotation-box, #note-box, #booking-submit-button {
    font-size: 2em;
  }
 
@@ -182,16 +182,16 @@ span.prenota{
   font-size: 13px;
   margin-top: 1em;
   margin-bottom: 1em;
-  
+
 }
 span.costo{
-  
+
   font-size: 25px;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 span.camera{
-  
+
   font-size: 10px;
   margin-top: 1em;
   margin-bottom: 1em;
