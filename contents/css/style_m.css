@@ -162,3 +162,33 @@
    margin:auto;
    margin-bottom: 2em;
  }
+
+/* -----bottone prenotazione camera */
+.posti{
+    display: none;
+}
+span.prenota{
+  font-size: 15px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+}
+span.costo{
+  
+  font-size: 21px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+span.camera{
+  
+  font-size: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#booking-button-camera {
+    text-decoration: none;
+    margin.left: 0em;
+    margin-right: 1em;
+    font-size: 1em;
+    color: white;
+    background-color: #f44336;
