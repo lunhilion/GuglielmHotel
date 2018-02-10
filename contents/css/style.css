@@ -40,9 +40,13 @@ p, ul, span {
     padding-left: 2.8em;
     padding-right: 2.8em;
     font-size: 1.2em;
+    width: 100%;
     color: white;
     background-color: #f44336;
     border: none;
+}
+#booking-form button:hover {
+    cursor: pointer;
 }
 /* --------camere--------*/
 
@@ -515,4 +519,22 @@ a:link, a:visited {
 }
 #prenota-m {
   display:none;
+}
+#login-form {
+    text-align: center;
+    margin-left: 34%;
+    margin-bottom: 2em;
+}
+
+#login-btn {
+    text-decoration: none;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+    font-size: 1.4em;
+    color: white;
+    background-color: #f44336;
+    border: none;
 }
