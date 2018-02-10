@@ -521,18 +521,24 @@ a:link, a:visited {
 }
 #login-form {
     text-align: center;
-    margin-left: 34%;
+    width: 98%;
     margin-bottom: 2em;
+}
+
+#login-form input{
+    width: 30%;
+    margin-bottom: 1em;
 }
 
 #login-btn {
     text-decoration: none;
     margin-top: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 1.6em;
-    padding-right: 1.6em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 2em;
+    padding-right: 2em;
     font-size: 1.4em;
+    width: 30%;
     color: white;
     background-color: #f44336;
     border: none;
