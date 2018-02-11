@@ -4,6 +4,10 @@
   height: 145px;
 }
 
+#content-box, #footer {
+  font-size: 2em;
+}
+
 #info_box h1 {
   font-size: 5em;
   text-align: center;
@@ -20,6 +24,7 @@
 
 #topScrollButton {
   bottom:1em;
+  font-size: 1.3em;
 }
 
 #home-link {
@@ -36,7 +41,6 @@
 #booking-form {
   margin: auto;
   width: 70%;
-  font-size: 2em;
 }
 
 #booking-form {
@@ -51,7 +55,6 @@
   width: 50%;
   margin:auto;
   float:none;
-  font-size: 2.5em;
 }
 
 #service-icons img {
@@ -68,21 +71,18 @@
 
 #navbar {
   overflow: auto;
+  font-size: 2em;
 }
 
 #navbar ul li {
   float: none;
 }
 
-#navbar li a {
-  font-size: 2.5em;
-}
-
 #naventry-prenota {
   display:block;
 }
 
-#topScrollButton, #booking-button-camera {
+#booking-button-camera {
   font-size: 2.5em;
 }
 
@@ -106,16 +106,11 @@
 .rightbox {
   width: 70%;
   margin: auto;
-  font-size: 1.5em;
 }
 
 .section_title img {
   width: 50%;
   height:50%;
-}
-
-.infobox {
-  font-size: 1.5em;
 }
 
 #tel-link {
@@ -140,15 +135,10 @@
    margin:auto;
    width: 70%;
    margin-bottom: 2em;
-   font-size: 2em;
  }
 
  .contactbox img {
    height: 15em;
- }
-
- #prenotation-box, #note-box, #booking-submit-button {
-   font-size: 2em;
  }
 
  .select-box {
@@ -158,7 +148,6 @@
  #note-box {
    width: 70%;
    margin: auto;
-   font-size: 2em;
    margin-bottom: 2em;
  }
 
@@ -170,9 +159,8 @@
  #booking-submit-button {
    display: block;
    float: none;
-   margin: auto
+   margin: auto;
    margin-bottom: 2em;
-   font-size: 3em;
  }
 
 /* -----bottone prenotazione camera */
@@ -188,10 +176,7 @@
     padding-left: 1.5em;
     padding-right: 1.5em;
 }
-span.costo{
 
-
-}
 #booking-button-camera {
     text-decoration: none;
     margin:auto;

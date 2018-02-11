@@ -468,6 +468,16 @@ a:link, a:visited {
   margin-top: 0.2em;
 }
 
+.error {
+ margin: auto;
+width: 50%;
+text-align: center;
+border: 2px solid red;
+list-style: none;
+margin-bottom: 2em;
+padding: 1em;
+}
+
 #footer {
     padding-bottom: 7em;
     background-color: black;
