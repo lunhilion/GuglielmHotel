@@ -16,11 +16,14 @@
     if (!isset($_POST['check-out']) || !checkData($_POST['check-out'])) {
         $errore = $errore . "<li>errore nella data di partenza</li>";
     }
-    if (!isset($_POST['guest-name'])) {
+    if (!isset($_POST['guest-name']) || $_POST['guest-name']=='') {
         $errore = $errore . "<li>errore nel nome</li>";
     }
-    if (!isset($_POST['guest-mail'])) {
+    if (!isset($_POST['guest-mail']) || $_POST['guest-mail']=='') {
         $errore = $errore . "<li>errore nella e-mail</li>";
+    }
+    if (checkEmail($_POST['guest-mail'])) {
+        $errore = $errore . "<li>email già presente</li>";
     }
     if (!$errore && (!checkDatas($_POST['check-in'],$_POST['check-out'])) ) {
         $errore = $errore . "<li>Prenotazione minima un giorno</li>";
@@ -43,7 +46,8 @@
                                     '{TipoStanza}' => getNomeStanza($_POST['TipoStanza']),
                                     '{check-in}' => $_POST['check-in'],
                                     '{costo}' => getCostoTotale($_POST['TipoStanza'],formattaData($_POST['check-in']),formattaData($_POST['check-out'])),
-                                    '{check-out}' => $_POST['check-out']);
+                                    '{check-out}' => $_POST['check-out'],
+                                    'idStanza' => $_POST['TipoStanza']);
         header("location: riepilogo.php");
     }
 
