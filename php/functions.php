@@ -190,6 +190,10 @@ function checkDatas($stringda,$stringa){
     $a = new DateTime($stringa);
     return $a>$da;
 }
+function rimuoviPrenotazione($idPrenotazione){
+    $query="DELETE FROM prenotazioni WHERE id='$idPrenotazione'";
+    return connection::QueryWrite($query);
+}
 
 function checkDateLibere($data_inizio,$data_fine,$appartamento) {
     //false il periodo è ok, true il periodo è occupato
@@ -199,15 +203,6 @@ function checkDateLibere($data_inizio,$data_fine,$appartamento) {
     AND tipoStanza = '$appartamento'";
     $result = connection::QueryRead($query);
     return (mysqli_fetch_row($result));
-}
-function checkEmail($email) {
-    $result = connection::QueryRead("SELECT email FROM prenotazioni WHERE email='$email'");
-    $row = mysqli_fetch_row($result);
-    if($row)
-        return true;
-    else
-        return false;
-
 }
 function insertPrenotazione($guestName,$guestMail,$da,$a,$tipoStanza) {
     $query = "INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `data_arrivo`, `data_partenza`, `tipoStanza`) VALUES

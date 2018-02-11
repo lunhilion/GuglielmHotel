@@ -3,6 +3,9 @@
     $content="";
     $mod=array('{list}' => '','{admin}' => '');
     if(isLogin()) {
+        if(isset($_GET['deleteId'])) {
+            rimuoviPrenotazione($_GET['deleteId']);
+        }
         $content="contents/cp_admin.html";
         $mod['{admin}']=$_SESSION['adminName'];
         $res=getPrenotazioni();
@@ -14,6 +17,8 @@
             <td headers="c4">'.$row[5].'</td>
             <td headers="c5">'.$row[3].'</td>
             <td headers="c6">'.$row[4].'</td>
+            <td headers="c7"><a href="?deleteId='.$row[0].'">Elimina</a></td>
+            
             </tr>';  
         }
         
