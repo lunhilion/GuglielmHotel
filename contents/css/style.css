@@ -91,8 +91,9 @@ p, ul, span {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
-#booking-form input {
-    padding: 1em;
+#booking-form input, #login-form input{
+    padding: 0.5em;
+    font-size: 1.2em;
     width: 85%;
 }
 #booking-button, #topScrollButton, #booking-submit-button {
@@ -484,6 +485,14 @@ a:link, a:visited {
   list-style: none;
   margin-bottom: 2em;
   padding: 1em;
+}
+
+.error li {
+  padding:0.3em;
+}
+
+#topScrollButton {
+  font-size: 1em;
 }
 
 #footer {

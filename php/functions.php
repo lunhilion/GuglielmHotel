@@ -55,7 +55,8 @@ function PrepareMobileMenu($title) {
       'Attorno a noi'=>'dintorni.php',
       'I nostri servizi'=>'servizi.php',
       'Contattaci'=>'contatti.php',
-      'Prenota'=>'prenota.php'
+      'Prenota'=>'prenota.php',
+      'TORNA IN CIMA'=>'#top'
   );
   $menu='<ul class="inner">';
   foreach($menuEntry as $index=>$link) {
