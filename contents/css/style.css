@@ -10,6 +10,7 @@
 
 html, body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
 }
 
 p, ul, span {
