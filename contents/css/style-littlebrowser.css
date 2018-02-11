@@ -1,15 +1,9 @@
 
 #logo {
-  width: 245px;
-  height: 145px;
-}
-
-#content-box, #footer {
-  font-size: 2em;
+  display:none;
 }
 
 #info_box h1 {
-  font-size: 5em;
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.2em;
@@ -20,11 +14,6 @@
 }
 #booking-button {
   display: none;
-}
-
-#topScrollButton {
-  bottom:1em;
-  font-size: 1.3em;
 }
 
 #home-link {
@@ -80,19 +69,10 @@
 #mobilenavbar, #navbar {
   display: block;
   overflow: auto;
-  font-size: 2em;
 }
 
 #mobilenavbar ul li, #navbar ul li {
   float: none;
-}
-
-#naventry-prenota {
-  display:block;
-}
-
-.booking-button-camera {
-  font-size: 2.5em;
 }
 
 .column {
@@ -122,17 +102,9 @@
   height:50%;
 }
 
-#tel-link {
-  pointer-events: all;
-}
-
-#tel-link, #mail-link {
+#mail-link, #tel-link {
   text-decoration: none;
 }
-
- #tel-link span {
-   text-decoration: underline;
- }
 
  #booking-button-camera {
    margin-top: 0;
@@ -180,7 +152,6 @@
 .posti{
     float: none;
     display: inline-block;
-    font-size: 1.2em;
     margin: auto;
     padding-left: 1.5em;
     padding-right: 1.5em;
