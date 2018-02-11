@@ -29,6 +29,12 @@ CREATE TABLE prezzi_disponibilita(
     FOREIGN KEY (idStanza) REFERENCES appartamenti(idStanza) ON DELETE CASCADE
 );
 
+CREATE TRIGGER `update_nStanza` BEFORE INSERT ON `prenotazioni` FOR EACH ROW BEGIN
+DECLARE contati tinyint;
+SELECT COUNT(*) INTO contati FROM prenotazioni WHERE tipoStanza=NEW.tipoStanza;
+SET NEW.nStanza=contati+1;
+END
+
 
 INSERT INTO `amministratori` (`nome`, `email`, `password`) VALUES
 ('Enrico', 'e.sanguin@gmail.com', '743c3e86bedbe9772dadf2e6ea374da9');
@@ -48,9 +54,3 @@ INSERT INTO `prezzi_disponibilita` (`idStanza`, `da`, `a`, `costoGiornaliero`, `
 INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `data_arrivo`, `data_partenza`, `tipoStanza`) VALUES
 ('Carlo', 'carlo@gmail.com', '2016-01-03', '2016-02-02', 'A'),
 ('Giuseppe', 'giuseppe@gmail.com', '2016-01-03', '2016-02-02', 'B');
-
-CREATE TRIGGER `update_nStanza` BEFORE INSERT ON `prenotazioni` FOR EACH ROW BEGIN
-DECLARE contati tinyint;
-SELECT COUNT(*) INTO contati FROM prenotazioni WHERE tipoStanza=NEW.tipoStanza;
-SET NEW.nStanza=contati+1;
-END
