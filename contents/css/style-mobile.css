@@ -86,7 +86,11 @@
   float: none;
 }
 
-#booking-button-camera {
+#naventry-prenota {
+  display:block;
+}
+
+.booking-button-camera {
   font-size: 2.5em;
 }
 

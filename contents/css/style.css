@@ -51,7 +51,7 @@ p, ul, span {
 }
 /* --------camere--------*/
 
-#booking-button-camera {
+.booking-button-camera {
     text-decoration: none;
     margin-top: 2em;
     margin-bottom: 6em;
