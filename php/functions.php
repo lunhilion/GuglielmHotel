@@ -11,22 +11,25 @@ function PrepareMenu($title) {
         'Attorno a noi'=>'dintorni.php',
         'I nostri servizi'=>'servizi.php',
         'Contattaci'=>'contatti.php',
-        'Prenota'=>'prenota.php'
+        'Prenota'=>'prenota.php',
+        'Menu'=>'#naventry-home'
     );
     $menu='<ul class="inner">';
     foreach($menuEntry as $index=>$link) {
         if($index==$title) {
-          if($link=='prenota.php'){
+          if($link=='prenota.php')
             $menu=$menu.'<li id="naventry-prenota"><a class="active">'.$index.'</a></li>';
-          }
+            else if($link=='index.php')
+              $menu=$menu.'<li id="naventry-home"><a class="active" href="'.$link.'">'.$index.'</a></li>';
           else{
             $menu=$menu.'<li><a class="active">'.$index.'</a></li>';
           }
         }
         else {
-          if($link=='prenota.php'){
+          if($link=='prenota.php')
             $menu=$menu.'<li id="naventry-prenota"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
-          }
+          else if($link=='index.php')
+            $menu=$menu.'<li id="naventry-home"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
           else{
             $menu=$menu.'<li><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
           }

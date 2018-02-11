@@ -3,7 +3,7 @@
   $mod=array('{check-in}' => '','{check-out}' => '','{errori}' => '');
   if(isset($_SESSION['Preventivo']))
     header("location: riepilogo.php");
-    
+
   if(isset($_GET['check-in']) && isset($_GET['check-out'])) {
     $mod['{check-in}']='value="'.$_GET['check-in'].'"';
     $mod['{check-out}']='value="'.$_GET['check-out'].'"';
@@ -31,9 +31,11 @@
     if (!$errore && checkDateLibere(formattaData($_POST['check-in']),formattaData($_POST['check-out']),$_POST['TipoStanza']) && getStanzeOccupate($_POST['TipoStanza']) == getMaxStanze($_POST['TipoStanza'])) {
         $errore = $errore . "<li>La data di prenotazione e gia impegnata</li>";
     }
-    
-    if($errore) 
+
+    if($errore)
+    {
       $mod['{errori}'] = '<ul class="error">'.$errore.'</ul>';
+    }
     else {
         $_SESSION['Preventivo']=1;
         $_SESSION['ArrayMod']=array('{guest-name}' => $_POST['guest-name'],
