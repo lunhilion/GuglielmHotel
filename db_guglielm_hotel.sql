@@ -49,7 +49,7 @@ INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `data_arrivo`, `data_partenza
 ('Carlo', 'carlo@gmail.com', '2016-01-03', '2016-02-02', 'A'),
 ('Giuseppe', 'giuseppe@gmail.com', '2016-01-03', '2016-02-02', 'B');
 
-DROP TRIGGER IF EXISTS `update_nStanza`;CREATE DEFINER=`root`@`localhost` TRIGGER `update_nStanza` BEFORE INSERT ON `prenotazioni` FOR EACH ROW BEGIN
+CREATE TRIGGER `update_nStanza` BEFORE INSERT ON `prenotazioni` FOR EACH ROW BEGIN
 DECLARE contati tinyint;
 SELECT COUNT(*) INTO contati FROM prenotazioni WHERE tipoStanza=NEW.tipoStanza;
 SET NEW.nStanza=contati+1;

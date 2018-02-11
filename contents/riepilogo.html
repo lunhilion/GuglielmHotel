@@ -1,5 +1,30 @@
 <div class="tile">
 	<div class="inner">
 		<h2>RIEPILOGO PRENOTAZIONE</h2>
+		<div class="column offset-left">
+		<ul>
+			<li>NOME CLIENTE: {guest-name}</li>
+			<li>DATA ARRIVO: {check-in}</li>
+		</ul>
+		</div>
+		<div class="column">
+			<ul>
+				<li>EMAIL: {guest-mail}</li>
+				<li>DATA PARTENZA: {check-out}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="tile BG-gray">
+	<div class="inner">
+		<div class="column offset-left">
+			<p>CAMERA SCELTA: {TipoStanza}</p>
+		</div>
+		<div class="column">
+			<p>COSTO PRENOTAZIONE: {costo}&euro;</p>
+			<form method="POST">
+				<button type="submit" name="conferma" value="conferma">CONFERMA PRENOTAZIONE</button>
+			</form> 
+		</div>
 	</div>
 </div>

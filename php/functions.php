@@ -115,6 +115,23 @@ function getPrenotazioni() {
     return $result;
 
 }
+function getNomeStanza($TipoStanza) {
+    $result = connection::QueryRead("SELECT nomeStanza FROM appartamenti WHERE idStanza='$TipoStanza'");
+    $row = mysqli_fetch_row($result);
+    return $row[0];
+}
+
+function getCostoStanza($TipoStanza) {
+    $result = connection::QueryRead("SELECT costoGiornaliero FROM prezzi_disponibilita WHERE idStanza='$TipoStanza'");
+    $row = mysqli_fetch_row($result);
+    return $row[0];
+}
+function getCostoTotale($TipoStanza,$stringda,$stringa) {
+    $da = new DateTime($stringda);
+    $a = new DateTime($stringa);
+    $giorni=$da->diff($a)->days;
+    return $giorni*getCostoStanza($TipoStanza);
+}
 
 function formattaData($string) {
     $date = explode("-", $string);

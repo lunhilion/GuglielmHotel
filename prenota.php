@@ -1,6 +1,9 @@
 <?php
   require_once('php/functions.php');
   $mod=array('{check-in}' => '','{check-out}' => '','{errori}' => '');
+  if(isset($_SESSION['Preventivo']))
+    header("location: riepilogo.php");
+    
   if(isset($_GET['check-in']) && isset($_GET['check-out'])) {
     $mod['{check-in}']='value="'.$_GET['check-in'].'"';
     $mod['{check-out}']='value="'.$_GET['check-out'].'"';
@@ -30,9 +33,15 @@
     }
     
     if($errore) 
-      $mod['{errori}'] = "<ul>".$errore."</ul>";
+      $mod['{errori}'] = "<ul class"error">".$errore."</ul>";
     else {
         $_SESSION['Preventivo']=1;
+        $_SESSION['ArrayMod']=array('{guest-name}' => $_POST['guest-name'],
+                                    '{guest-mail}' => $_POST['guest-mail'],
+                                    '{TipoStanza}' => getNomeStanza($_POST['TipoStanza']),
+                                    '{check-in}' => $_POST['check-in'],
+                                    '{costo}' => getCostoTotale($_POST['TipoStanza'],formattaData($_POST['check-in']),formattaData($_POST['check-out'])),
+                                    '{check-out}' => $_POST['check-out']);
         header("location: riepilogo.php");
     }
 
