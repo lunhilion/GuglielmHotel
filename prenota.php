@@ -33,7 +33,7 @@
     }
     
     if($errore) 
-      $mod['{errori}'] = "<ul class"error">".$errore."</ul>";
+      $mod['{errori}'] = '<ul class="error">'.$errore.'</ul>';
     else {
         $_SESSION['Preventivo']=1;
         $_SESSION['ArrayMod']=array('{guest-name}' => $_POST['guest-name'],
