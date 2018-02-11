@@ -63,7 +63,7 @@ p, ul, span {
     color: white;
     background-color: #f44336;
 }
-span.costo{
+.costo{
   display: block;
   font-size: 25px;
   padding-top: 1em;
@@ -233,20 +233,20 @@ h3{
     padding-right: 1em;
 }
 
-#navbar {
+#navbar, #mobilenavbar {
     width: 100%;
     text-align: center;
     background-color: #333;
 
 }
-#navbar ul {
+#navbar ul, #mobilenavbar ul {
     overflow: hidden;
     list-style-type: none;
 }
-#navbar ul li {
+#navbar ul li , #mobilenavbar ul li{
     float: left;
 }
-#navbar li a{
+#navbar li a, #mobilenavbar li a{
     font-size: 1.3em;
     display: block;
     padding-top: 0.9em;
@@ -257,7 +257,15 @@ h3{
     text-decoration: none;
 }
 
+#naventry-menu {
+  display:none;
+}
+
 #naventry-prenota {
+  display:none;
+}
+
+#mobilenavbar {
   display:none;
 }
 
@@ -469,13 +477,13 @@ a:link, a:visited {
 }
 
 .error {
- margin: auto;
-width: 50%;
-text-align: center;
-border: 2px solid red;
-list-style: none;
-margin-bottom: 2em;
-padding: 1em;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  border: 2px solid red;
+  list-style: none;
+  margin-bottom: 2em;
+  padding: 1em;
 }
 
 #footer {
