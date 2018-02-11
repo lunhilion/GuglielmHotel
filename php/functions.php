@@ -173,7 +173,15 @@ function checkDateLibere($data_inizio,$data_fine,$appartamento) {
     $result = connection::QueryRead($query);
     return (mysqli_fetch_row($result));
 }
+function checkEmail($email) {
+    $result = connection::QueryRead("SELECT email FROM prenotazioni WHERE email='$email'");
+    $row = mysqli_fetch_row($result);
+    if($row)
+        return true;
+    else
+        return false;
 
+}
 function insertPrenotazione($guestName,$guestMail,$da,$a,$tipoStanza) {
     $query = "INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `data_arrivo`, `data_partenza`, `tipoStanza`) VALUES
     ('$guestName', '$guestMail', '$da', '$a', '$tipoStanza')";

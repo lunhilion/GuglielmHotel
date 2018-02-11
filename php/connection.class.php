@@ -10,7 +10,10 @@ class connection {
         $connection = new mysqli(self::$DB_HOST,self::$DB_USER,self::$DB_PWD,self::$DB_NAME);
         mysqli_set_charset($connection, "utf8");
         $result = $connection->query($query);
-        return true;
+        if($result)
+            return true;
+        else
+            return false;
     }
     
     static function QueryRead($query) {
