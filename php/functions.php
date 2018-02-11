@@ -121,10 +121,15 @@ function formattaData($string) {
     $result = $date[2] . "-" . $date[1] . "-". $date[0];
     return $result;
 }
-function getMaxPersone($appartamento) {
-    $result = connection::QueryRead("SELECT maxPersone FROM appartamenti WHERE nStanza='$appartamento'");
+function getMaxStanze($idStanza) {
+    $result = connection::QueryRead("SELECT maxStanze FROM prezzi_disponibilita WHERE idStanza='$idStanza'");
     $row = mysqli_fetch_row($result);
     return $row[0];
+}
+function getStanzeOccupate($idStanza) {
+    $result = connection::QueryRead("SELECT * FROM prenotazioni WHERE tipoStanza='$idStanza'");
+    $row = mysqli_num_rows($result);
+    return $row;
 }
 
 function checkData($string) {
@@ -147,8 +152,14 @@ function checkDateLibere($data_inizio,$data_fine,$appartamento) {
     $query = "SELECT * FROM prenotazioni
     WHERE (('$data_inizio' BETWEEN data_arrivo AND data_partenza)
     OR (data_arrivo BETWEEN '$data_inizio' AND '$data_fine'))
-    AND nStanza = '$appartamento'";
+    AND tipoStanza = '$appartamento'";
     $result = connection::QueryRead($query);
     return (mysqli_fetch_row($result));
+}
+
+function insertPrenotazione($guestName,$guestMail,$da,$a,$tipoStanza) {
+    $query = "INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `data_arrivo`, `data_partenza`, `tipoStanza`) VALUES
+    ('$guestName', '$guestMail', '$da', '$a', '$tipoStanza')";
+    return connection::QueryWrite($query);
 }
 ?>
