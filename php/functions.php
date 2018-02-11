@@ -21,7 +21,7 @@ function PrepareMenu($title) {
             $menu=$menu.'<li id="naventry-prenota"><a class="active">'.$index.'</a></li>';
             else if($link=='index.php')
               $menu=$menu.'<li id="naventry-home"><a class="active" href="'.$link.'">'.$index.'</a></li>';
-          else{
+            else{
             $menu=$menu.'<li><a class="active">'.$index.'</a></li>';
           }
         }
@@ -30,7 +30,9 @@ function PrepareMenu($title) {
             $menu=$menu.'<li id="naventry-prenota"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
           else if($link=='index.php')
             $menu=$menu.'<li id="naventry-home"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
-          else{
+            else if($link=='#naventry-home')
+              $menu=$menu.'<li id="naventry-menu"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+            else{
             $menu=$menu.'<li><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
           }
         }
