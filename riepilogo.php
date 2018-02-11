@@ -6,7 +6,6 @@
   else {
     $content="";
     $mod=$_SESSION['ArrayMod'];
-    print_r($mod);
     if(isset($_SESSION['Effettuata'])) {
       $content="contents/conferma.html";
       unset($_SESSION['ArrayMod']);

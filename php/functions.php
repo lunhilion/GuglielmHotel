@@ -38,7 +38,7 @@ function PrepareMenu($title) {
 
 function PrepareHeader($title) {
     $btn='';
-    if($title!='Home')
+    if($title!='Home' && $title!='Prenota')
         $btn='<a id="booking-button" href="prenota.php">PRENOTA ORA</a>';
     $header=file_get_contents("contents/header.html");
     $header=str_replace('{booking-btn}',$btn,$header);
