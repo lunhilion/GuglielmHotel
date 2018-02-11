@@ -52,32 +52,22 @@ p, ul, span {
 
 #booking-button-camera {
     text-decoration: none;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: white;
     background-color: #f44336;
 }
-span.prenota{
-  display: block;
-  font-size: 15px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
 span.costo{
+  display: block;
   font-size: 25px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-span.camera{
-  
-  font-size: 12px;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 1.5em;
 }
 .posti img{
   width: 18px;
@@ -88,9 +78,9 @@ span.camera{
 .posti{
     float: left;
     font-size: 1.4em;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 6em;
-    padding-top: 1em;
+    padding-top: 0em;
     padding-bottom: 1em;
     padding-left: 1.5em;
     padding-right: 1.5em;
