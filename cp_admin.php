@@ -12,8 +12,8 @@
             <td headers="c2">'.$row[2].'</td>
             <td headers="c3">'.getNomeStanza($row[6]).'</td>
             <td headers="c4">'.$row[5].'</td>
-            <td headers="c5" axis="data da">'.$row[3].'</td>
-            <td headers="c6" axis="data a">'.$row[4].'</td></td>
+            <td headers="c5">'.$row[3].'</td>
+            <td headers="c6">'.$row[4].'</td>
             </tr>';  
         }
         
