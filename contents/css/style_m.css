@@ -69,17 +69,22 @@
   padding-bottom: 1em;
 }
 
-#navbar {
+.menu {
+  display:none;
+}
+
+#naventry-menu {
+  display: block;
+}
+
+#mobilenavbar, #navbar {
+  display: block;
   overflow: auto;
   font-size: 2em;
 }
 
-#navbar ul li {
+#mobilenavbar ul li, #navbar ul li {
   float: none;
-}
-
-#naventry-prenota {
-  display:block;
 }
 
 #booking-button-camera {

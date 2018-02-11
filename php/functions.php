@@ -11,29 +11,18 @@ function PrepareMenu($title) {
         'Attorno a noi'=>'dintorni.php',
         'I nostri servizi'=>'servizi.php',
         'Contattaci'=>'contatti.php',
-        'Prenota'=>'prenota.php',
         'Menu'=>'#naventry-home'
     );
     $menu='<ul class="inner">';
     foreach($menuEntry as $index=>$link) {
         if($index==$title) {
-          if($link=='prenota.php')
-            $menu=$menu.'<li id="naventry-prenota"><a class="active">'.$index.'</a></li>';
-            else if($link=='index.php')
-              $menu=$menu.'<li id="naventry-home"><a class="active" href="'.$link.'">'.$index.'</a></li>';
-            else{
-            $menu=$menu.'<li><a class="active">'.$index.'</a></li>';
-          }
+            $menu=$menu.'<li class="menu"><a class="active">'.$index.'</a></li>';
         }
         else {
-          if($link=='prenota.php')
-            $menu=$menu.'<li id="naventry-prenota"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
-          else if($link=='index.php')
-            $menu=$menu.'<li id="naventry-home"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
-            else if($link=='#naventry-home')
-              $menu=$menu.'<li id="naventry-menu"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
-            else{
-            $menu=$menu.'<li><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+          if($link=='#naventry-home')
+              $menu=$menu.'<li class="menu" id="naventry-menu"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+          else{
+            $menu=$menu.'<li class="menu"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
           }
         }
     }
@@ -56,6 +45,37 @@ function PrepareContent($modification,$content) {
          $page = str_replace($tag,$value,$page);
     }
     return $page;
+}
+
+function PrepareMobileMenu($title) {
+  $menuEntry=array(
+      'Home'=>'index.php',
+      'Come raggiungerci'=>'come_raggiungerci.php',
+      'Le nostre camere'=>'camere.php',
+      'Attorno a noi'=>'dintorni.php',
+      'I nostri servizi'=>'servizi.php',
+      'Contattaci'=>'contatti.php',
+      'Prenota'=>'prenota.php'
+  );
+  $menu='<ul class="inner">';
+  foreach($menuEntry as $index=>$link) {
+      if($index==$title) {
+          if($link=='index.php')
+            $menu=$menu.'<li id="naventry-home"><a class="active" href="'.$link.'">'.$index.'</a></li>';
+          else{
+          $menu=$menu.'<li><a class="active">'.$index.'</a></li>';
+        }
+      }
+      else {
+        if($link=='index.php')
+          $menu=$menu.'<li id="naventry-home"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+        else{
+          $menu=$menu.'<li><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+        }
+      }
+  }
+  $mobilemenu=$menu.'</ul>';
+  return $mobilemenu;
 }
 
 function PrepareFooter($title) {
@@ -84,6 +104,8 @@ function BuildPage($title,$content,$array=0) {
     else
         $body=file_get_contents($content);
     $page=str_replace('{content}',$body,$page);
+    $mobilenavbar=PrepareMobileMenu($title);
+    $page=str_replace('{mobilenavbar}',$mobilenavbar,$page);
     $footer=PrepareFooter($title);
     $page=str_replace('{footer}',$footer,$page);
     echo $page;
