@@ -11,7 +11,7 @@ CREATE TABLE appartamenti(
 CREATE TABLE prenotazioni(
     id int unsigned auto_increment primary key,
     nomeUtente varchar(15) not null,
-    email varchar(50) UNIQUE not null,
+    email varchar(50) not null,
     data_arrivo date,
     data_partenza date,
     nStanza tinyint unsigned,
@@ -40,9 +40,9 @@ INSERT INTO `amministratori` (`nome`, `email`, `password`) VALUES
 ('Enrico', 'e.sanguin@gmail.com', '743c3e86bedbe9772dadf2e6ea374da9');
 
 INSERT INTO `appartamenti` (`idStanza`, `nomeStanza`) VALUES
-('A', 'Camera Singola Classica'),
-('B', 'Camera Doppia Classica'),
-('C', 'Camera Superior'),
+('A', 'Singola Classica'),
+('B', 'Doppia Classica'),
+('C', 'Superior'),
 ('D', 'Suite');
 
 INSERT INTO `prezzi_disponibilita` (`idStanza`, `da`, `a`, `costoGiornaliero`, `maxStanze`) VALUES

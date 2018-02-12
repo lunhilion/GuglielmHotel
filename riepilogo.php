@@ -20,6 +20,12 @@
         unset($_SESSION['Preventivo']);
       }
       else {
+          if(isset($_POST['cancella'])) {
+            unset($_SESSION['ArrayMod']);
+            unset($_SESSION['Preventivo']);
+            header("location: prenota.php");
+
+          }
           if(isset($_POST['conferma'])) {
             $pren=insertPrenotazione($mod['{guest-name}'],$mod['{guest-mail}'],formattaData($mod['{check-in}']),formattaData($mod['{check-out}']),$mod['idStanza']);
            if($pren) {

@@ -22,9 +22,6 @@
     if (!isset($_POST['guest-mail']) || $_POST['guest-mail']=='') {
         $errore = $errore . "<li>errore nella e-mail</li>";
     }
-    if (checkEmail($_POST['guest-mail'])) {
-        $errore = $errore . "<li>email già presente</li>";
-    }
     if (!$errore && (!checkDatas($_POST['check-in'],$_POST['check-out'])) ) {
         $errore = $errore . "<li>Prenotazione minima un giorno</li>";
     }
