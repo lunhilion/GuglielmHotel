@@ -38,21 +38,24 @@ a:link, a:visited {
     background-color: white;
     width: 20%;
 }
-#booking-form button {
+#booking-form button, .summary-button {
     margin-top: 1.6em;
     padding-top: 1em;
     padding-bottom: 1em;
-    padding-left: 2.8em;
-    padding-right: 2.8em;
     font-size: 1.2em;
-    width: 100%;
+    width: 95%;
     color: white;
     border: none;
     background-color: #f44336;
 }
-#booking-form button:hover {
+#booking-form button:hover, #login-btn:hover, .summary-button:hover {
     cursor: pointer;
     background-color: #ba342b;
+}
+
+.summary-button {
+  margin-top:0;
+  margin-bottom: 2em;
 }
 
 /* --------camere--------*/
@@ -566,4 +569,22 @@ h3{
     color: white;
     background-color: #f44336;
     border: none;
+}
+
+.summary {
+  margin-bottom: 3em;
+}
+
+.summary ul {
+  list-style: none;
+}
+
+.summary ul li {
+  padding:0.3em;
+}
+
+#summary-cash {
+  display: block;
+  margin-bottom: 2em;
+  text-align: center;
 }
