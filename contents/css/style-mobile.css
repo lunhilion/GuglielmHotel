@@ -90,10 +90,6 @@
   display:block;
 }
 
-.booking-button-camera {
-  font-size: 2.5em;
-}
-
 .column {
   float: none;
   margin: auto;
@@ -133,9 +129,20 @@
    text-decoration: underline;
  }
 
- #booking-button-camera {
-   margin-top: 0;
-   margin-bottom: 2em;
+ .rightbox a {
+   float:none;
+ }
+.costo {
+  font-size: 1.1em;
+}
+
+.booking-button-camera {
+    margin-top: 0;
+    margin: auto;
+    display: block;
+    float: none;
+    text-align: center;
+    margin-bottom: 2em;
  }
 
  .contactbox {
@@ -173,25 +180,11 @@
 
 /* -----bottone prenotazione camera */
 .posti img{
-  margin:auto;
-  display: block;
+    display:none;
 }
 .posti{
+    text-align: center;
     float: none;
-    display: inline-block;
     font-size: 1.2em;
     margin: auto;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
 }
-
-#booking-button-camera {
-    text-decoration: none;
-    margin:auto;
-    margin-left: 1em;
-    margin-right: 2em;
-    padding-right: 1em;
-    padding-left: 1em;
-    font-size: 1em;
-    color: white;
-    background-color: #f44336;
