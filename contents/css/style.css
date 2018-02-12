@@ -22,6 +22,10 @@ p, ul, span {
     float: left;
     opacity: 0.7;
 } */
+
+a:link, a:visited {
+  color: black;
+}
 #booking-box {
     background-image: url("../../img/home-img.jpeg");
     background-size: cover;
@@ -43,32 +47,39 @@ p, ul, span {
     font-size: 1.2em;
     width: 100%;
     color: white;
-    background-color: #f44336;
     border: none;
+    background-color: #f44336;
 }
 #booking-form button:hover {
     cursor: pointer;
+    background-color: #ba342b;
 }
+
 /* --------camere--------*/
 
 .booking-button-camera {
-    text-decoration: none;
-    margin-top: 2em;
-    margin-bottom: 6em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    font-size: 1.4em;
-    color: white;
-    background-color: #f44336;
-}
-.costo{
-  display: block;
-  font-size: 25px;
+  text-decoration: none;
+  margin-top: 2.8em;
   padding-top: 1em;
   padding-bottom: 1em;
-  margin-left: 1.5em;
+  padding-left: 2.8em;
+  padding-right: 2.8em;
+  font-size: 1.3em;
+  border: none;
+  background-color: #f44336;
+}
+.booking-button-camera:hover {
+    background-color: #ba342b;
+}
+
+.booking-button-camera:visited, .booking-button-camera:link {
+  color:white;
+}
+
+.costo{
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .posti img{
   width: 18px;
@@ -277,10 +288,6 @@ h3{
     background-color: #f44336;
 }
 
-a:link, a:visited {
-  color: black;
-}
-
 /*stile per la pagina dintorni.html*/
 #InternalNav {
 	text-align: center;
@@ -296,9 +303,8 @@ a:link, a:visited {
   padding: 1em;
 }
 
-#InternalNav a:link, a:visited {
+#InternalNav a:link, #InternalNav a:visited {
 	text-decoration: none;
-	color: black;
 }
 
 #InternalNav a:hover {
