@@ -2,14 +2,23 @@
 
 
 ## Cose da fare
-- [x] sistemare creazione dinamica menu
-- [ ] finire di sistemare le pagine
-- [x] caricare font locale
-- [x] aggiungere box booking
-- [x] aggiungere bottone booking
-- [ ] scrivere css mobile+stampa
-- [x] aggiungere favicon
+### Generali:
 - [ ] aggiungere tab index (?)
 - [ ] supporto per screenreader
 - [ ] aggiungere attributo lang=EN dove serve
 - [ ] rendere accessibile tabella cpanel
+- [ ] rendere accessibili caratteri speciali
+- [ ] aggiungere breadcrumb
+- [ ] controllare input javascript
+- [ ] hamburger (?)
+
+
+### Silvia:
+- [ ] sistemare css print
+- [ ] relazione
+
+
+### Erny:
+- [ ] controllare input php
+- [ ] validare pagine
+
