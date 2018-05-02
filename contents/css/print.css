@@ -23,11 +23,11 @@ body {
 a:link, a:visited {
   color: black;
 }
-a[href]:after{content: "(" attr(href) ")"}
+/*a[href]:after{content: "(" attr(href) ")"}*/
 /* ------- header ---*/
 #header {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    overflow: auto;
+    background-color:white;
 }
 #header h1 {
     font-size: 3em;
@@ -67,15 +67,17 @@ a[href]:after{content: "(" attr(href) ")"}
     background-image: url("../../img/home-img.jpeg");
     background-size: cover;
     width: auto;
-    padding-top: 4em;
-    padding-bottom: 8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 #booking-form {
+    display:none;
     padding: 2em;
     background-color: white;
     width: 20%;
 }
 #booking-form button {
+    display: none; 
     margin-top: 1.6em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -88,11 +90,12 @@ a[href]:after{content: "(" attr(href) ")"}
     background-color: #f44336;
 }
 #booking-form button:hover {
+    display: none; 
     cursor: pointer;
     background-color: #ba342b;
 }
 #booking-form label {
-    display: inline-block;
+    display: block;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
@@ -105,12 +108,12 @@ a[href]:after{content: "(" attr(href) ")"}
     display: block;
 }
 .inner {
-    margin: auto;
+    margin top: 1em;
     max-width: 1268px;
 }
 .tile {
     overflow: auto;
-    padding-top: 3em;
+    padding-top: 0em;
 }
 .tile h2 {
     font-size: 2em;
@@ -121,7 +124,7 @@ a[href]:after{content: "(" attr(href) ")"}
     text-align: center;
 }
 .tile  p{
-    padding-bottom: 3em;
+    padding-bottom: 0.5em;
 }
 .map iframe{
     width: 100%;
@@ -133,18 +136,16 @@ a[href]:after{content: "(" attr(href) ")"}
     width: 30%;
     padding-left: 1%;
     padding-right: 1%;
-    float: none;
+    float: left;
 }
-#left-box img{
-    width:550px;
-    height:350px;
-    max-width: 500px;
-    padding-left: 2em;
-    padding-right: 2em;
+#leftbox img{
+    width: 80%;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 .column-sm {
     width: 20%;
-    float: none;
+    float: left;
 }
 .offset-left {
     margin-left: 18%;
@@ -182,8 +183,9 @@ h3{
 }
 /* -------button -----*/
 #booking-button, #topScrollButton, #booking-submit-button {
+    display:none;
     text-decoration: none;
-    float: right;
+    float: none;
     margin-top: 0.5em;
     margin-right: 2em;
     padding-top: 1em;
@@ -195,15 +197,18 @@ h3{
     background-color: #f44336;
 }
 #booking-button:hover, #topScrollButton:hover {
+    display: none;
     background-color: #ba342b;
 }
 
 #booking-submit-button {
+  display: none;
   border-style: none;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 #booking-submit-button:hover, #booking-form-button:hover {
+  display: none;
   background-color: #ba342b;
   cursor: pointer;
 }
@@ -216,6 +221,7 @@ h3{
   z-index: 99;
 }
 .booking-button-camera {
+  display:none;
   text-decoration: none;
   margin-top: 2.8em;
   padding-top: 1em;
@@ -244,10 +250,10 @@ h3{
   padding-left: 1em;
 }
 .posti{
-    float: none;
+    float: middle;
     font-size: 1.4em;
     margin-top: 1em;
-    margin-bottom: 6em;
+    margin-bottom: 0em;
     padding-top: 0em;
     padding-bottom: 1em;
     padding-left: 1.5em;
@@ -255,8 +261,8 @@ h3{
 }
 #logo {
     float: none;
-    width: 10em;
-    height: 6em;
+    width: 7em;
+    height: 5em;
     padding-right: 1em;
 }
 .not-active:hover {
@@ -286,7 +292,7 @@ h3{
 .section_title {
 	text-align: center;
 	font-size: 1.5em;
-	margin-bottom: 3em;
+	margin-bottom: 1.5em;
 }
 #Cosa_visitare {
   margin-top: 3em;
@@ -295,19 +301,18 @@ h3{
 	font-size: 2em;
 }
 .section_title img {
-  height: 15em;
+  height: 5em;
   max-width: 500px;
 }
 .leftbox {
   padding-top:33%;
 	float:left;
   width: 45%;
-  position:static;
 }
 .leftbox img {
   width:100%;
   max-width: 500px;
-  position:static;
+  position:left;
   top:0;
   left:0;
   bottom:0;
@@ -326,13 +331,10 @@ h3{
 	margin-bottom: 1em;
 }
 .rightbox p {
-	margin-top: 1em;
+	margin-top: 0em;
 }
 .rightbox a {
   float:right;
-}
-.rightbox ul a, .rightbox p a {
-  float:none;
 }
 /* Stile per la pagina servizi.html */
 .infobox h3 {
@@ -351,14 +353,14 @@ h3{
   padding: 0.1em 0em 0.1em;
 }
 .infobox img {
-  float: none;
+  float: left;
   height: 1.5em;
   width: 1.5em;
 }
 /*Stile per la pagina contatti.html*/
 .contactbox {
   width: 45%;
-  float: non;
+  float: none;
   margin: 1%;
   text-align: center;
   border: 1px solid #DDD;
@@ -382,10 +384,10 @@ h3{
   text-decoration: underline;
 }
 .contactbox img {
-  height: 12em;
+  height: 6em;
 }
 #phone-img {
-  height: 10em;
+  height: 6em;
   margin-bottom: 1em;
   margin-top: 1em;
 }
@@ -430,7 +432,7 @@ h3{
 #footer {
     display:none;
 }
-/*
+
 #social-footer {
     padding: 0.5em;
     background-color: #333;
@@ -442,8 +444,9 @@ h3{
     padding-right: 1.5em;
     width: 3em;
 }
-*/
+
 #tab-prenotazioni {
+  
     text-align: center;
     margin-left: 17%;
     margin-bottom: 2em;
