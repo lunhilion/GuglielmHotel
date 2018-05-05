@@ -11,6 +11,7 @@
 - [ ] aggiungere breadcrumb
 - [ ] controllare input javascript
 - [ ] hamburger (?)
+- [ ] pagina 404 ??
 
 
 ### Silvia:
