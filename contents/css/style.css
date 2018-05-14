@@ -176,12 +176,7 @@ a:link, a:visited {
     padding-right: 1%;
     float: left;
 }
-#left-box img{
-    width:550px;
-    height:350px;
-    padding-left: 2em;
-    padding-right: 2em;
-}
+
 .column-sm {
     width: 20%;
     float: left;
