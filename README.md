@@ -23,4 +23,4 @@
 ### Erny:
 - [ ] sistemare bounds disponibilita' php
 - [ ] validare pagine
-
+- [ ] inserire breadcrumb
