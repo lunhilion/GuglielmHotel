@@ -29,16 +29,14 @@ p, ul, span {
   border-style: solid; 
   border-radius: 10pt;
 }
-#booking-form button, .summary-button {
+#booking-form button {
   margin-top: 0.8cm;
   margin-bottom: 0.8cm;
   padding-top: 0.4cm;
   padding-bottom: 0.4cm;
   font-size: 14pt;
   width: 95%;
-  color: white;
   border: none;
-  background-color: #f44336;
 }
 
 /* --------camere--------*/
@@ -80,21 +78,13 @@ p, ul, span {
   font-size: 14pt;
   width: 85%;
 }
-#booking-button, #topScrollButton, #booking-submit-button {
-  text-decoration: none;
-  float: right;
-  margin-top: 0.2cm;
-  margin-right: 0.8cm;
-  padding: 0.4cm 0.7cm;
-  font-size: 14pt;
-  color: white;
-  background-color: #f44336;
-}
 
 #booking-submit-button {
-  border-style: none;
-  margin-top: 0.8cm;
-  margin-bottom: 0.8cm;
+  display: none;
+}
+
+#booking-button, .summary-button {
+  display: none;
 }
 
 #topScrollButton {
@@ -119,17 +109,17 @@ p, ul, span {
   text-align: center;
 }
 
-.map iframe{          (???)
-    width: 100%;
-    height: 25em;
-    border:none;
-    padding-bottom: 2em;
-
+.map iframe{       
+  width: 100%;
+  height: 10cm;
+  border: none;
+  padding-bottom: 0.8cm;
 }
 
 .column {
-    display: block;
-    padding: 0.2cm 0.5cm;
+  display: block;
+  padding: 0.2cm 0.5cm;
+  text-align: center;
 }
 
 #left-box img{        (???)
@@ -138,9 +128,10 @@ p, ul, span {
     padding-left: 2em;
     padding-right: 2em;
 }
-.column-sm {          (???)
-    width: 20%;
-    float: left;
+
+.column-sm {          
+  width: 20%;
+  float: left;
 }
 
 .text-center {
@@ -160,7 +151,6 @@ p, ul, span {
 }
 
 #header {
-  /*visibility: hidden;*/
   padding-top: 0.2cm;
   padding-bottom: 0.2cm;
 }
@@ -171,7 +161,7 @@ p, ul, span {
 
 #home-link {
   text-decoration: none;
-  display:block;
+  display: block;
 }
 
 #info-box {
@@ -183,68 +173,38 @@ p, ul, span {
 }
 
 h3 {
-   padding-bottom: 1.5em;
+   padding-bottom: 0.6cm;
 }
 
 #service-icons img {
     width: 20%;
-    padding-bottom: 1.3em;
+    padding-bottom: 0.3cm;
 }
 
 #logo {
-    float: left;
-    width: 4cm;
-    height: 2.5cm;
-    padding-right: 0.4cm;
+  float: left;
+  width: 4cm;
+  height: 2.5cm;
+  padding-right: 0.4cm;
 }
 
-#navbar {
+#navbar, #naventry-menu, #naventry-prenota, #InternalNav {
   display: none;
-}
-
-#naventry-menu {
-  display: none;
-}
-
-#naventry-prenota {
-  display:none;
-}
-
-/*stile per la pagina dintorni.html*/
-#InternalNav {
-	text-align: center;
-}
-
-#InternalNav ul {
-	font-size: 2em;
-	list-style: none;
-}
-
-#InternalNav a {
-  display: block;
-  padding: 1em;
-}
-
-#InternalNav a:link, #InternalNav a:visited {
-	text-decoration: none;
 }
 
 .section_title {
 	text-align: center;
-	font-size: 1.5em;
-	margin-bottom: 3em;
-}
-
-#Cosa_visitare {
-  margin-top: 3em;
+	font-size: 18pt;
+  margin-bottom: 1cm;
+  margin-top: 1cm;
 }
 
 .section_title h2 {
-	font-size: 2em;
+	font-size: 24pt;
 }
 
 .section_title img {
-  height: 15em;
+  height: 2cm;
 }
 
 .leftbox {
@@ -256,7 +216,7 @@ h3 {
 
 .leftbox img {
   width:100%;
-  position:absolute;
+  position: absolute;
   top:0;
   left:0;
   bottom:0;
@@ -273,47 +233,47 @@ h3 {
 }
 
 .rightbox h3 {
-	font-size: 1.5em;
-	margin-left: 0em;
-	margin-bottom: 1em;
-}
-
-.rightbox p {
-	margin-top: 1em;
+	font-size: 18pt;
+	margin-left: 0cm;
+	margin-bottom: 0.2cm;
 }
 
 .rightbox a {
-  float:right;
+  float: right;
+}
+
+.rightbox p {
+  text-align: justify;
 }
 
 .rightbox ul a, .rightbox p a {
-  float:none;
+  float: none;
 }
 
-/* Stile per la pagina servizi.html */
+/* Stile per la pagina servizi.html */     
 
 .infobox h3 {
-  margin-left: 2em;
+  margin-left: 0.8cm;
 	text-align: left;
 }
 
 .infobox ul {
-  border-top: 1px solid #DDD;
 	line-height: 150%;
-  margin-left: 1em;
-  margin-bottom: 2em;
+  margin-left: 0.4cm;
+  margin-bottom: 0.8cm;
   list-style: none;
+  text-align: center;
 }
 
 .infobox li {
   border-bottom: 1px solid #DDD;
-  padding: 0.1em 0em 0.1em;
+  border-top: 1px solid #DDD;
 }
 
 .infobox img {
   float: left;
-  height: 1.5em;
-  width: 1.5em;
+  height: 0.5cm;
+  width: 0.5cm;
 }
 
 /*Stile per la pagina contatti.html*/
@@ -324,24 +284,19 @@ h3 {
   margin: 1%;
   text-align: center;
   border: 1px solid #DDD;
-  margin-bottom: 4em;
+  margin-bottom: 1cm;
 }
 
 .contactbox h3 {
-  font-size: 1.5em;
-  padding-bottom: 1em;
+  font-size: 18pt;
+  padding-bottom: 0.3cm;
 }
 
 .contactbox span {
   text-decoration: none;
-  font-size: 1.2em;
-  margin-bottom: 1em;
+  font-size: 14pt;
+  margin-bottom: 0.3cm;
   display: block;
-}
-
-#tel-link {
-  pointer-events: none;
-  cursor: default;
 }
 
 #mail-link span {
@@ -349,25 +304,26 @@ h3 {
 }
 
 .contactbox img {
-  height: 12em;
+  height: 3cm;
 }
 
 #phone-img {
-  height: 10em;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  height: 2.2cm;
+  margin-bottom: 0.4cm;
+  margin-top: 0.4cm;
 }
 
 /*stile per la pagina prenota*/
+
 #prenotation-box input {
-  font-size: 1.2em;
-  padding: 0.4em;
-  width: 90%;
-  margin-bottom: 1em;
+  font-size: 14pt;
+  padding: 0.1cm;
+  width: 6cm;
+  margin-bottom: 0.4cm;
 }
 
 #input-name {
-  margin-top: 1em;
+  margin-top: 0.4cm;
 }
 
 .select-box {
@@ -375,101 +331,97 @@ h3 {
 }
 
 .select-box select {
-  padding: 0.2em;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  font-size: 1.2em;
+  padding: 0.1cm;
+  margin-top: 0.4cm;
+  margin-bottom: 0.8cm;
+  font-size: 14pt;
 }
 
 #note-box {
-  width: 50%;
-  margin-bottom: 3em;
+  width: 100%;
+  margin-bottom: 1cm;
+  text-align: left;
 }
 
 #note-box h3 {
-  text-align: left;
-  padding-left: 7em;
-  font-size: 1.3em;
+  padding-bottom: 1cm;
+  font-size: 14pt;
 }
 
 #note-box ul {
   list-style: none;
-  line-height: 1.5em;
+  line-height: 18pt;
 }
 
 #note-box li {
-  margin-top: 0.2em;
+  margin-top: 0.1cm;
 }
 
-.error {
+.error {                 
   margin: auto;
   width: 50%;
   text-align: center;
   border: 2px solid red;
   list-style: none;
-  margin-bottom: 2em;
-  padding: 1em;
+  margin-bottom: 0.8cm;
+  padding: 0.4cm;
 }
 
 .error li {
-  padding:0.3em;
-}
-
-#topScrollButton {
-  font-size: 1em;
+  padding: 0.1cmm;
 }
 
 #footer {
-    padding-bottom: 7em;
-    background-color: black;
-    text-align: center;
+  padding-bottom: 0.5cm;
+  text-align: center;
 }
-#footer p {
-    padding-top: 1.2em;
-    padding-bottom: 1.2em;
-    color: #777;
-}
-#footer a {
-    color: #494949;
-}
-#social-footer {
-    padding: 0.5em;
-    background-color: #333;
-}
-#social-footer img {
-    padding-top: 0.1em;
-    padding-bottom: 0.3em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    width: 3em;
-}
-#tab-prenotazioni {
-    text-align: center;
-    margin-left: 17%;
-    margin-bottom: 2em;
-    border-collapse: collapse;
-}
-#tab-prenotazioni th {
-    background-color: #f1f1f1;
-    padding: 1em;
 
+#footer a {
+  display: none;
 }
+
+#social-footer p {
+  padding-top: 0.2cm;
+  padding-bottom: 0.2cm;
+}
+
+#social-footer a {
+  display: initial;
+}
+
+#social-footer {
+  padding: 0.2cm;
+}
+
+#social-footer img {
+  padding: 0.1cm 0.3cm;
+  width: 1cm;
+}
+
+#tab-prenotazioni {
+  text-align: center;
+  margin-bottom: 1cm;
+  border-collapse: collapse;
+}
+
 #tab-prenotazioni td {
-    padding: 0.4em;
-    border-bottom: 1px solid #ddd;
+  padding: 0.2cm;
+  border-bottom: 1px solid #ddd;
 }
+
 #prenota-m {
   display:none;
 }
+
 #login-form {
-    text-align: center;
-    width: 98%;
-    margin-bottom: 2em;
+  text-align: center;
+  width: 98%;
+  margin-bottom: 0.8cm;
 }
 
 #login-form input{
-    width: 30%;
-    margin-bottom: 1em;
+  width: 30%;
+  margin-bottom: 0.4cm;
 }
 
 #login-btn {
@@ -487,7 +439,7 @@ h3 {
 }
 
 .summary {
-  margin-bottom: 3em;
+  margin-bottom: 1.5cm;
 }
 
 .summary ul {
@@ -495,11 +447,11 @@ h3 {
 }
 
 .summary ul li {
-  padding:0.3em;
+  padding: 0.2cm;
 }
 
 #summary-cash {
   display: block;
-  margin-bottom: 2em;
+  margin-bottom: 0.8cm;
   text-align: center;
 }

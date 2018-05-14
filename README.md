@@ -20,6 +20,6 @@
 
 
 ### Erny:
-- [ ] controllare input php
+- [ ] sistemare bounds disponibilita' php
 - [ ] validare pagine
 
