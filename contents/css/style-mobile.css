@@ -1,19 +1,16 @@
 
 #logo {
-  width: 245px;
-  height: 145px;
+  display: none;
 }
 
 #content-box, #footer {
-  font-size: 2em;
+
 }
 
 #info_box h1 {
-  font-size: 5em;
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.2em;
-  padding-left: 0em;
 }
 #info_box h2 {
   display: none;
@@ -23,7 +20,7 @@
 }
 
 #topScrollButton {
-  font-size: 1.3em;
+  font-size: ;
 }
 
 #home-link {
@@ -47,13 +44,13 @@
 }
 
 #booking-form input, #login-form input {
-  font-size: 1.5em;
+  font-size: ;
 }
 
 .column-sm {
   width: 50%;
-  margin:auto;
-  float:none;
+  margin: auto;
+  float: none;
 }
 
 #service-icons img {
@@ -69,7 +66,11 @@
 }
 
 .menu {
-  display:none;
+  display: none;
+}
+
+.tile {
+  padding-top: 2em;
 }
 
 #naventry-menu {
@@ -79,7 +80,6 @@
 #mobilenavbar, #navbar {
   display: block;
   overflow: auto;
-  font-size: 2em;
 }
 
 #mobilenavbar ul li, #navbar ul li {
@@ -148,8 +148,8 @@
 
 
  .contactbox {
-   float:none;
-   margin:auto;
+   float: none;
+   margin: auto;
    width: 70%;
    margin-bottom: 2em;
  }
@@ -189,4 +189,8 @@
     float: none;
     font-size: 1.2em;
     margin: auto;
+}
+
+#InternalNav a {
+    padding: 0.5em;
 }
