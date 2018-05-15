@@ -176,12 +176,7 @@ a:link, a:visited {
     padding-right: 1%;
     float: left;
 }
-#left-box img{
-    width:550px;
-    height:350px;
-    padding-left: 2em;
-    padding-right: 2em;
-}
+
 .column-sm {
     width: 20%;
     float: left;
@@ -569,4 +564,22 @@ h3{
   display: block;
   margin-bottom: 2em;
   text-align: center;
+}
+
+
+
+@media screen and (max-width:1000px) {
+  .posti {
+      text-align: center;
+      float: none;
+      margin:auto;
+  }
+
+  .rightbox a {
+    margin-top: 0em;
+    display: block;
+    float: none;
+    text-align: center;
+    margin-bottom: 2em;
+  }
 }

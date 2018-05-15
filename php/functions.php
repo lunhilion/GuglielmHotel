@@ -1,7 +1,9 @@
 <?php
+session_start();
+
 require_once('php/connection.class.php');
 
-session_start();
+
 
 function PrepareMenu($title) {
     $menuEntry=array(

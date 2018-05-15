@@ -12,6 +12,7 @@
 - [ ] controllare input javascript
 - [ ] hamburger (?)
 - [ ] pagina 404 ??
+- [ ] sostituire i px nei css
 
 
 ### Silvia:
@@ -22,4 +23,4 @@
 ### Erny:
 - [ ] sistemare bounds disponibilita' php
 - [ ] validare pagine
-
+- [ ] inserire breadcrumb
