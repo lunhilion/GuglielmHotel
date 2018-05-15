@@ -588,3 +588,11 @@ h3{
   margin-bottom: 2em;
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .posti {
+    float:none;
+    margin: auto;
+  }
+
+}

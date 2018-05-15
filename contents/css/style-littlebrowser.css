@@ -95,6 +95,7 @@
 .rightbox {
   width: 70%;
   margin: auto;
+  text-align: center;
 }
 
 .section_title img {
@@ -105,11 +106,6 @@
 #mail-link, #tel-link {
   text-decoration: none;
 }
-
- #booking-button-camera {
-   margin-top: 0;
-   margin-bottom: 2em;
- }
 
  .contactbox {
    float:none;
@@ -157,13 +153,20 @@
     padding-right: 1.5em;
 }
 
-#booking-button-camera {
-    text-decoration: none;
-    margin:auto;
-    margin-left: 1em;
-    margin-right: 2em;
-    padding-right: 1em;
-    padding-left: 1em;
-    font-size: 1em;
-    color: white;
-    background-color: #f44336;
+a.booking-button-camera {
+    margin-top: 0;
+    margin: auto;
+    display: block;
+    float: none;
+    text-align: center;
+    margin-bottom: 2em;
+ }
+
+ .posti img{
+     display:none;
+ }
+ .posti{
+     text-align: center;
+     float: none;
+     margin: auto;
+ }
