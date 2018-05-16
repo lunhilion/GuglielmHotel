@@ -26,6 +26,9 @@ p, ul, span {
 a:link, a:visited {
   color: black;
 }
+#breadcrumb {
+  display: none;
+}
 #booking-box {
     background-image: url("../../img/home-img.jpeg");
     background-size: cover;
