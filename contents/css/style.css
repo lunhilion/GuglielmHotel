@@ -565,3 +565,21 @@ h3{
   margin-bottom: 2em;
   text-align: center;
 }
+
+
+
+@media screen and (max-width:1000px) {
+  .posti {
+      text-align: center;
+      float: none;
+      margin:auto;
+  }
+
+  .rightbox a {
+    margin-top: 0em;
+    display: block;
+    float: none;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+}

@@ -1,3 +1,8 @@
+@page {
+  size: 210mm 297mm; 
+  margin: 1.5cm;
+}
+
 @font-face {
   font-family: Raleway;
   src: url("../../font/Raleway-Regular.ttf") format("truetype");
@@ -12,16 +17,22 @@ html, body {
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
+img {
+  filter: grayscale(100%);
+}
+
+a {
+  color: #000;
+}
+
 p, ul, span {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 #booking-box {
-  background-size: cover;
-  width: 60%;
-  padding: 0.5cm 25%;
-  
+  display: none;
 }
+
 #booking-form {
   padding: 0.5cm;
   background-color: white;
@@ -42,12 +53,7 @@ p, ul, span {
 /* --------camere--------*/
 
 .booking-button-camera {
-  text-decoration: none;
-  margin-top: 1cm;
-  padding: 0.4m 1cm;
-  font-size: 14pt;
-  border: none;
-  background-color: #f44336;
+  display: none;
 }
 
 .costo{
@@ -62,11 +68,10 @@ p, ul, span {
   padding-left: 0.4cm;
 }
 .posti{
-  float: left;
   font-size: 14pt;
   margin-top: 0.4cm;
-  margin-bottom: 2.5cm;
-  padding: 0cm 0.7 cm 0.4cm;
+  margin-bottom: 0.4cm;
+  padding: 0cm 7cm 0.4cm;
 }
 #booking-form label {
   display: inline-block;
@@ -96,8 +101,8 @@ p, ul, span {
 }
 
 .tile {
-  overflow: auto;
-  padding-top: 1cm;
+  /*overflow: auto;*/
+  padding-top: 0.5cm;
 }
 
 .tile h2 {
@@ -120,13 +125,6 @@ p, ul, span {
   display: block;
   padding: 0.2cm 0.5cm;
   text-align: center;
-}
-
-#left-box img{        (???)
-    width:550px;
-    height:350px;
-    padding-left: 2em;
-    padding-right: 2em;
 }
 
 .column-sm {          
@@ -188,7 +186,7 @@ h3 {
   padding-right: 0.4cm;
 }
 
-#navbar, #naventry-menu, #naventry-prenota, #InternalNav {
+#navbar, #naventry-menu, #naventry-prenota, #InternalNav, #mobilenavbar {
   display: none;
 }
 
@@ -204,28 +202,15 @@ h3 {
 }
 
 .section_title img {
-  height: 2cm;
+  height: 1.5cm;
 }
 
 .leftbox {
-  padding-top:33%;
-	float:left;
-  width: 45%;
-  position:relative;
-}
-
-.leftbox img {
-  width:100%;
-  position: absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
+  display: none;
 }
 
 .rightbox {
-  margin-left: 50%;
-	width: 50%;
+	width: 100%;
 }
 
 .rightbox ul {
@@ -372,30 +357,7 @@ h3 {
 }
 
 #footer {
-  padding-bottom: 0.5cm;
-  text-align: center;
-}
-
-#footer a {
   display: none;
-}
-
-#social-footer p {
-  padding-top: 0.2cm;
-  padding-bottom: 0.2cm;
-}
-
-#social-footer a {
-  display: initial;
-}
-
-#social-footer {
-  padding: 0.2cm;
-}
-
-#social-footer img {
-  padding: 0.1cm 0.3cm;
-  width: 1cm;
 }
 
 #tab-prenotazioni {
