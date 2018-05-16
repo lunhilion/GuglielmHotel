@@ -23,6 +23,6 @@
 - [ ] validare pagine
 
 
-##Link Validatori
-https://www.totalvalidator.com/
-http://app.validator.pro/
+## Link Validatori
+1. https://www.totalvalidator.com/
+2. http://app.validator.pro/
