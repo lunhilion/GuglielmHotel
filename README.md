@@ -22,3 +22,7 @@
 - [ ] sistemare bounds disponibilita' php
 - [ ] validare pagine
 
+
+##Link Validatori
+https://www.totalvalidator.com/
+http://app.validator.pro/
