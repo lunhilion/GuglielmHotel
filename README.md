@@ -8,10 +8,8 @@
 - [ ] aggiungere attributo lang=EN dove serve
 - [ ] rendere accessibile tabella cpanel
 - [ ] rendere accessibili caratteri speciali
-- [ ] aggiungere breadcrumb
 - [ ] controllare input javascript
 - [ ] hamburger (?)
-- [ ] pagina 404 ??
 - [ ] sostituire i px nei css
 
 
@@ -23,4 +21,4 @@
 ### Erny:
 - [ ] sistemare bounds disponibilita' php
 - [ ] validare pagine
-- [ ] inserire breadcrumb
+
