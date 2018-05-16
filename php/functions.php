@@ -93,6 +93,17 @@ function PrepareFooter($title) {
     return $footer;
 }
 
+function PrepareBreadcrumb($title) {
+    $breadcrumb = '<p> Home';
+    if($title != "Home")
+        $breadcrumb = $breadcrumb.' / '.$title.'</p>';
+    else
+        $breadcrumb = $breadcrumb.'</p>';
+
+    return $breadcrumb;
+
+}
+
 function BuildPage($title,$content,$array=0) {
     $page=file_get_contents("contents/structure.html");
     $page=str_replace('{title}',$title,$page);
@@ -100,6 +111,8 @@ function BuildPage($title,$content,$array=0) {
     $page=str_replace('{header}',$header,$page);
     $navbar=PrepareMenu($title);
     $page=str_replace('{navbar}',$navbar,$page);
+    $breadcrumb=PrepareBreadcrumb($title);
+    $page=str_replace('{breadcrumb}',$breadcrumb,$page);
     if($array==1)
         $body=$content;
     else
