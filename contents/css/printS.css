@@ -101,7 +101,7 @@ p, ul, span {
 }
 
 .tile {
-  overflow: auto;
+  /*overflow: auto;*/
   padding-top: 0.5cm;
 }
 
@@ -186,7 +186,7 @@ h3 {
   padding-right: 0.4cm;
 }
 
-#navbar, #naventry-menu, #naventry-prenota, #InternalNav {
+#navbar, #naventry-menu, #naventry-prenota, #InternalNav, #mobilenavbar {
   display: none;
 }
 
