@@ -257,6 +257,9 @@ h3{
     color: white;
     text-decoration: none;
 }
+#navbar li a:visited {
+  color: #f5554a;
+}
 
 #naventry-menu {
   display:none;
