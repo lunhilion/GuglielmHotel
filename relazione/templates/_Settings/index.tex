@@ -1,0 +1,15 @@
+%Inserisce il link all'indice
+%\addcontentsline{toc}{section}{Indice}
+{
+\hypersetup{linkcolor=black}
+%\hypersetup{colorlinks=false}
+\tableofcontents
+}
+
+%\clearpage
+
+%Da qui comincia la numerazione normale
+\pagenumbering{arabic}
+
+%Imposta il formato di visualizzazione
+\rfoot{Pagina \thepage~di~\pageref{TotPages}}

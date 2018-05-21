@@ -1,0 +1,59 @@
+%Generali
+
+\newcommand{\G}{\tiny\textit{{G}}\normalsize}
+
+\newcommand{\RQQ}[1]{\tiny{\uppercase{\textit{#1}}}}
+
+
+\newcommand{\diaryEntry}[5]{#2 & \emph{#4} & #3 & #5 & #1\\ \hline}
+
+%comando per una nuova riga nella tabella del diario delle modifiche
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\renewcommand*\sectionmark[1]{\markboth{#1}{}}
+\renewcommand*\subsectionmark[1]{\markright{#1}}
+
+
+\newcommand{\myincludegraphics}[2][]{%
+	\setbox0=\hbox{\phantom{X}}%
+	\vtop{
+		\hbox{\phantom{X}}
+		\vskip-\ht0
+		\hbox{\includegraphics[#1]{#2}}}}
+
+
+\newcommand{\nogloxy}[1]{#1} % comando da usare per evitare di mettere il mark del 
+\newcommand{\impl}{\textcolor{Green}{Implementato}}
+\newcommand{\implno}{\textcolor{Red}{Non Implementato}}
+
+% Formattazione paragrafo e sotto-paragrafo
+\newcommand{\myparagraph}[1]{\paragraph{#1}\hfill\vspace{1em}\\\noindent}
+\newcommand{\mysubparagraph}[1]{\subparagraph{#1}\hfill\vspace{1em}\\\noindent}
+
+
+% Standard ISO
+\newcommand{\iso}[1]{$[$#1$]$}
+
+%
+% COLORI
+%
+% Intestazione tabelle
+\definecolor{I}{HTML}{003153} %{22313D}
+% Righe dispari tabelle
+\definecolor{D}{HTML}{F0F8FF}%{E8EAF6}
+% Righe pari tabelle
+\definecolor{P}{HTML}{A1CAF1}%{7DA7D9}
+
+\lstdefinestyle{customTeX}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	xleftmargin=\parindent,
+	language=TeX,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{Gray},
+	stringstyle=\color{orange},
+}
