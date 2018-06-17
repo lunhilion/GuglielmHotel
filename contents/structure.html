@@ -9,16 +9,13 @@
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="contents/css/style.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 900px)" href="contents/css/style-tablet.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 620px)" href="contents/css/style-mobile.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 992px)" href="contents/css/style-tablet.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="contents/css/style-mobile.css"/>
     <link rel="stylesheet" type="text/css" media="print" href="contents/css/printS.css"/>
-    <!--
-      PIXEL BREAKDOWNS:
-        -1010 px il bottone prenota della pagina camere funziona male. Deve essere scritto in maniera migliore, non serve css alternativo.
-        -900 px il logo va a puttane. Da qua a 620 serve un css alternativo per gestire il logo.
-        -620 entra il css mobile
-        -365 px dimensione minima supportata
-    -->
+
+    <script src="contents/javascript/topScroll.js"></script>
+    <script src="contents/javascript/mobile-menu.js"></script>
+
   </head>
 
   <body>
@@ -32,14 +29,15 @@
     <div id="navbar">
       {navbar}
     </div>
-    <div id="content-box">
-      {content}
-    </div>
     <div id="mobilenavbar">
       {mobilenavbar}
+    </div>
+    <div id="content-box">
+      {content}
     </div>
     <div id="footer">
       {footer}
     </div>
+    <div id="topScrollButton">Torna su</div>
   </body>
 </html>

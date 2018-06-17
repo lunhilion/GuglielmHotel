@@ -7,11 +7,6 @@
 
 }
 
-#info_box h1 {
-  text-align: center;
-  padding-top: 0.5em;
-  padding-bottom: 0.2em;
-}
 #info_box h2 {
   display: none;
 }
@@ -73,13 +68,48 @@
   padding-top: 2em;
 }
 
-#naventry-menu {
-  display: block;
+.tile-room {
+  padding-top: 3em;
+}
+.tile-room .rightbox h3 {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  padding: 0;
 }
 
-#mobilenavbar, #navbar {
+.tile-room .booking-button-camera {
+  margin-bottom: 0;
+}
+
+#naventry-menu {
+  font-size: 1.3em;
+  display: block;
+  font-weight: bold;
+  padding: 0.9em 1.6em;
+  color: white;
+  text-decoration: none;
+  text-align: right;
+}
+
+#naventry-menu img {
+  margin-left: 1em;
+  margin-bottom: -6px;
+}
+
+#navbar {
   display: block;
   overflow: auto;
+}
+
+#mobilenavbar {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+  position: absolute;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 #mobilenavbar ul li, #navbar ul li {
@@ -94,10 +124,6 @@
   float: none;
   margin: auto;
   width: 70%;
-}
-
-.column p {
-  border-top: 1px solid #DDD;
 }
 
 .leftbox {
@@ -189,8 +215,33 @@
     float: none;
     font-size: 1.2em;
     margin: auto;
+    width: 100%;
+}
+
+.booking-button-camera-container {
+  float: none;
+  width: 100%;
+  margin-top: 1.5em;
 }
 
 #InternalNav a {
     padding: 0.5em;
+}
+
+.home-link {
+  width: 100%;
+}
+
+.home-link .info-container {
+  text-align: center;
+  width: 100%;
+}
+
+.home-link .info-container h1 {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+.info-container {
+  padding-left: 0;
 }

@@ -33,20 +33,21 @@ a:link, a:visited {
     background-image: url("../../img/home-img.jpeg");
     background-size: cover;
     width: auto;
-    padding-top: 6em;
     padding-bottom: 10em;
+    padding-left: 4em;
+    padding-top: 6em;
 }
+
 #booking-form {
     padding: 2em;
     background-color: white;
-    width: 20%;
+    width: 280px;
 }
 #booking-form button, .summary-button {
     margin-top: 1.6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 0.5em;
     font-size: 1.2em;
-    width: 95%;
+    width: 100%;
     color: white;
     border: none;
     background-color: #f44336;
@@ -65,7 +66,7 @@ a:link, a:visited {
 
 .booking-button-camera {
   text-decoration: none;
-  margin-top: 2.8em;
+  /*margin-top: 2.8em;*/
   padding: 1em 2.8em;
   font-size: 1.3em;
   border: none;
@@ -81,7 +82,6 @@ a:link, a:visited {
 
 .costo{
   display: block;
-  padding-top: 1em;
   padding-bottom: 1em;
 }
 .posti img{
@@ -90,22 +90,30 @@ a:link, a:visited {
   padding-right: 0.5em;
   padding-left: 1em;
 }
+
 .posti{
     float: left;
     font-size: 1.4em;
-    margin-top: 1em;
-    margin-bottom: 6em;
-    padding: 0em 1.5em 1em;
+    /*margin-top: 1em;*/
+    /*padding: 0em 1.5em 1em;*/
+    width: 50%;
 }
+
+.booking-button-camera-container {
+  float: right;
+  width: 50%;
+}
+
 #booking-form label {
     display: inline-block;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
 #booking-form input, #login-form input{
-    padding: 0.5em;
-    font-size: 1.2em;
-    width: 85%;
+  box-sizing: border-box;
+  padding: 0.5em;
+  font-size: 1.2em;
+  width: 100%;
 }
 #booking-button, #topScrollButton, #booking-submit-button {
     text-decoration: none;
@@ -121,6 +129,15 @@ a:link, a:visited {
     background-color: #ba342b;
 }
 
+.booking-button-container {
+  float: right;
+  padding-right: 2em;
+}
+
+.booking-button-container #booking-button {
+  margin-right: 0;
+}
+
 #booking-submit-button {
   border-style: none;
   margin-top: 2em;
@@ -133,11 +150,13 @@ a:link, a:visited {
 }
 
 #topScrollButton {
+  cursor: pointer;
   display:none;
   position:fixed;
   margin: 0;
   bottom: 2em;
   right: 2em;
+  text-transform: uppercase;
   z-index: 99;
 }
 
@@ -164,6 +183,19 @@ a:link, a:visited {
 
 .tile  p{
     padding-bottom: 3em;
+}
+
+.tile-room {
+  padding-bottom: 3em;
+}
+
+
+.tile-room .leftbox {
+  padding: 0;
+}
+
+.tile-room .leftbox img {
+  position: relative;
 }
 
 .map iframe{
@@ -204,6 +236,8 @@ a:link, a:visited {
 #header {
     padding-top: 2%;
     padding-bottom: 2%;
+    float: left;
+    width: 100%;
 }
 #header h1 {
     font-size: 3em;
@@ -211,11 +245,19 @@ a:link, a:visited {
 #home-link {
   text-decoration: none;
   display:block;
-  margin-right: 18em
 }
 
 #info-box {
   width: 70%;
+}
+
+.home-link {
+  float: left;
+}
+
+.home-link .img-container,
+.home-link .info-container {
+  float: left;
 }
 
 #info_box h2 {
@@ -241,6 +283,7 @@ h3{
     width: 100%;
     text-align: center;
     background-color: #333;
+    clear: left;
 
 }
 #navbar ul, #mobilenavbar ul {
@@ -258,7 +301,7 @@ h3{
     text-decoration: none;
 }
 #navbar li a:visited {
-  color: #f5554a;
+  color: #f08080;
 }
 
 #naventry-menu {
@@ -349,7 +392,7 @@ h3{
 .rightbox h3 {
 	font-size: 1.5em;
 	margin-left: 0em;
-	margin-bottom: 1em;
+	padding-bottom: 2.5em;
 }
 
 .rightbox p {
@@ -572,12 +615,15 @@ h3{
   text-align: center;
 }
 
+.booking-info {
+  width: 100%;
+}
+
 
 
 @media screen and (max-width:1000px) {
   .posti {
       text-align: center;
-      float: none;
       margin:auto;
   }
 
@@ -586,6 +632,5 @@ h3{
     display: block;
     float: none;
     text-align: center;
-    margin-bottom: 2em;
   }
 }
