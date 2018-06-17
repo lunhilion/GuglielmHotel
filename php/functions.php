@@ -13,7 +13,7 @@ function PrepareMenu($title) {
         'Attorno a noi'=>'dintorni.php',
         'I nostri servizi'=>'servizi.php',
         'Contattaci'=>'contatti.php',
-        'Menu'=>'#naventry-home'
+        'Menù'=>'#naventry-home'
     );
     $menu='<ul class="inner">';
     foreach($menuEntry as $index=>$link) {
@@ -22,7 +22,8 @@ function PrepareMenu($title) {
         }
         else {
           if($link=='#naventry-home')
-              $menu=$menu.'<li class="menu" id="naventry-menu"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+              $menu=$menu.'<li class="menu" id="naventry-menu">' . $index .
+                '<img src="img/menu-bars-icon.png" alt="Menu bars icon" class="menu-bars-icon" /></li>';
           else{
             $menu=$menu.'<li class="menu"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
           }
@@ -35,7 +36,7 @@ function PrepareMenu($title) {
 function PrepareHeader($title) {
     $btn='';
     if($title!='Home' && $title!='Prenota')
-        $btn='<a id="booking-button" href="prenota.php">PRENOTA ORA</a>';
+        $btn='<div class="booking-button-container"><a id="booking-button" href="prenota.php">PRENOTA ORA</a></div>';
     $header=file_get_contents("contents/header.html");
     $header=str_replace('{booking-btn}',$btn,$header);
     return $header;
@@ -58,7 +59,6 @@ function PrepareMobileMenu($title) {
       'I nostri servizi'=>'servizi.php',
       'Contattaci'=>'contatti.php',
       'Prenota'=>'prenota.php',
-      'TORNA IN CIMA'=>'#top'
   );
   $menu='<ul class="inner">';
   foreach($menuEntry as $index=>$link) {
