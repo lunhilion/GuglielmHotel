@@ -186,8 +186,11 @@ function getMaxStanze($idStanza) {
     $row = mysqli_fetch_row($result);
     return $row[0];
 }
-function getStanzeOccupate($idStanza) {
-    $result = connection::QueryRead("SELECT * FROM prenotazioni WHERE tipoStanza='$idStanza'");
+function getStanzeOccupate($data_inizio,$data_fine,$idStanza) {
+    $result = connection::QueryRead("SELECT * FROM prenotazioni
+    WHERE (('$data_inizio' BETWEEN data_arrivo AND data_partenza)
+    OR (data_arrivo BETWEEN '$data_inizio' AND '$data_fine'))
+    AND tipoStanza = '$idStanza'");
     $row = mysqli_num_rows($result);
     return $row;
 }

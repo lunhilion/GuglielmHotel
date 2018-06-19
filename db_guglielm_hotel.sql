@@ -28,10 +28,22 @@ CREATE TABLE prezzi_disponibilita(
     primary key(idStanza,da,a),
     FOREIGN KEY (idStanza) REFERENCES appartamenti(idStanza) ON DELETE CASCADE
 );
+/* VECCHIO TRIGGER NON USARE
+
 
 CREATE TRIGGER `update_nStanza` BEFORE INSERT ON `prenotazioni` FOR EACH ROW BEGIN
 DECLARE contati tinyint;
 SELECT COUNT(*) INTO contati FROM prenotazioni WHERE tipoStanza=NEW.tipoStanza;
+SET NEW.nStanza=contati+1;
+END
+*/
+
+CREATE TRIGGER `update_nStanza` BEFORE INSERT ON `prenotazioni` FOR EACH ROW BEGIN
+DECLARE contati tinyint;
+SELECT COUNT(*) INTO contati FROM prenotazioni
+    WHERE ((NEW.data_arrivo BETWEEN data_arrivo AND data_partenza)
+    OR (data_arrivo BETWEEN NEW.data_arrivo AND NEW.data_partenza))
+    AND tipoStanza = NEW.tipoStanza;
 SET NEW.nStanza=contati+1;
 END
 

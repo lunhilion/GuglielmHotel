@@ -33,14 +33,13 @@
     if (!$errore && (!checkDatas($_POST['check-in'],$_POST['check-out'])) ) {
         $errore = $errore . "<li>Prenotazione minima un giorno</li>";
     }
-    if(!$errore && (getStanzeOccupate($_POST['TipoStanza']) == getMaxStanze($_POST['TipoStanza']))) {
-        $errore = $errore . "<li>Il tipo di camera selezionata ha raggiunto il massimo numero di prenotazioni</li>";
+    if(!$errore && (getStanzeOccupate(formattaData($_POST['check-in']),formattaData($_POST['check-out']),$_POST['TipoStanza']) == getMaxStanze($_POST['TipoStanza']))) {
+        $errore = $errore . "<li>Il tipo di camera selezionata ha raggiunto il massimo numero di prenotazioni in questo periodo</li>";
     }
     if (!$errore && !checkBoundDate(formattaData($_POST['check-in']),formattaData($_POST['check-out']),$_POST['TipoStanza'])) {
         $errore = $errore . "<li>La stanza non è prenotabile nel periodo selezionato</li>";
     }
     
-
     if($errore)
     {
       $mod['{errori}'] = '<ul class="error">'.$errore.'</ul>';
