@@ -211,6 +211,16 @@ function rimuoviPrenotazione($idPrenotazione){
     return connection::QueryWrite($query);
 }
 
+function checkDateLibere($data_inizio,$data_fine,$appartamento) {
+    //false il periodo è ok, true il periodo è occupato
+    $query = "SELECT * FROM prenotazioni
+    WHERE (('$data_inizio' BETWEEN data_arrivo AND data_partenza)
+    OR (data_arrivo BETWEEN '$data_inizio' AND '$data_fine'))
+    AND tipoStanza = '$appartamento'";
+    $result = connection::QueryRead($query);
+    return (mysqli_fetch_row($result));
+}
+
 function checkBoundDate($data_inizio,$data_fine,$appartamento) {
     //ritorna vero se la prenotazione è all'interno delle date prenotabili
     $query = "SELECT * FROM prezzi_disponibilita
@@ -224,5 +234,11 @@ function insertPrenotazione($guestName,$guestMail,$da,$a,$tipoStanza) {
     $query = "INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `data_arrivo`, `data_partenza`, `tipoStanza`) VALUES
     ('$guestName', '$guestMail', '$da', '$a', '$tipoStanza')";
     return connection::QueryWrite($query);
+}
+
+function checkIfCurrentDate($data) {
+    $arrivo = new DateTime($data);
+    $attuale = new DateTime(date("Y-m-d"));
+    return $arrivo>=$attuale;
 }
 ?>

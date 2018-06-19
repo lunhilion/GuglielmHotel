@@ -26,6 +26,10 @@
         if(!filter_var($_POST['guest-mail'], FILTER_VALIDATE_EMAIL))
             $errore = $errore . "<li>formato email non corretto</li>";
     }
+    if(!$errore && (!checkIfCurrentDate(formattaData($_POST['check-in'])))) {
+        $errore = $errore . "<li>Il giorno di arrivo è già passato</li>";
+
+    }
     if (!$errore && (!checkDatas($_POST['check-in'],$_POST['check-out'])) ) {
         $errore = $errore . "<li>Prenotazione minima un giorno</li>";
     }
@@ -35,10 +39,12 @@
     if (!$errore && !checkBoundDate(formattaData($_POST['check-in']),formattaData($_POST['check-out']),$_POST['TipoStanza'])) {
         $errore = $errore . "<li>La stanza non è prenotabile nel periodo selezionato</li>";
     }
+    
 
     if($errore)
     {
       $mod['{errori}'] = '<ul class="error">'.$errore.'</ul>';
+
     }
     else {
         $_SESSION['Preventivo']=1;

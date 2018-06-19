@@ -46,11 +46,11 @@ INSERT INTO `appartamenti` (`idStanza`, `nomeStanza`) VALUES
 ('D', 'Suite');
 
 INSERT INTO `prezzi_disponibilita` (`idStanza`, `da`, `a`, `costoGiornaliero`, `maxStanze`) VALUES
-('A','2016-01-01','2016-06-15','50','4'),
-('B','2016-06-16','2016-12-31','64','3'),
-('C','2016-12-12','2017-12-12','85','3'),
-('D','2016-12-12','2017-12-12','104','1');
+('A','2018-06-18','2019-06-15','50','4'),
+('B','2018-07-16','2019-12-31','64','3'),
+('C','2018-10-12','2018-12-12','85','3'),
+('D','2018-12-12','2019-12-01','104','1');
 
 INSERT INTO `prenotazioni` (`nomeUtente`, `email`, `data_arrivo`, `data_partenza`, `tipoStanza`) VALUES
-('Carlo', 'carlo@gmail.com', '2016-01-03', '2016-02-02', 'A'),
-('Giuseppe', 'giuseppe@gmail.com', '2016-01-03', '2016-02-02', 'B');
+('Carlo', 'carlo@gmail.com', '2018-06-20', '2018-06-30', 'A'),
+('Giuseppe', 'giuseppe@gmail.com', '2018-07-20', '2018-07-25', 'B');
