@@ -9,8 +9,10 @@ function scrollFunction() {
 }
 
 window.onload = function() {
-  var topScrollButton = document.getElementById('topScrollButton');
-  topScrollButton.addEventListener('click', function() {
-    window.scrollTo(0, 0);
+  var topScrollButton = document.getElementById("topScrollButton");
+  console.log('pippo',topScrollButton);
+  topScrollButton.addEventListener("click", function() {
+  	window.scrollTo(0, 0);
   });
-};
+  handleMobileMenu();
+}
