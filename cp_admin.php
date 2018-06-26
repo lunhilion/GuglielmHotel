@@ -1,4 +1,5 @@
 <?php
+    //require_once('js/login.js');
     require_once('php/functions.php');
     $content="";
     $mod=array('{list}' => '','{admin}' => '');
