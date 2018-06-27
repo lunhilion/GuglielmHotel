@@ -1,17 +1,18 @@
 
 function pv(){
-   p_pulisci();		//pulisco i p ogni volta che l'utente cerca di inserire i dati
-   if(p_emptyForm()){		//verifico se tutti i campi sono diversi da null
-	   if(p_valida()){
+   pulisci();		//pulisco i p ogni volta che l'utente cerca di inserire i dati
+   if(emptyForm()){		//verifico se tutti i campi sono diversi da null
+	   if(valida()){
 			return true;		//funzione per validare i campi dati
 	   }
 	   else{
 		   return false;
 	   }
-   }
+	}
+	return false;	//altrimenti ritorna false se mancano i campi dati
 }
 
-function p_emptyForm(){
+function emptyForm(){
 	var checkIn = document.getElementById("check-in");
 	var checkOut = document.getElementById("check-out");
 	var nome = document.getElementById("guest-name");
@@ -41,7 +42,7 @@ function p_emptyForm(){
     return con;
 }
 
-function p_pulisci(){
+function pulisci(){
 	document.getElementById("checkIn_error").innerHTML = "";
 	document.getElementById("checkOut_error").innerHTML = "";
 	document.getElementById("nome_error").innerHTML = "";
@@ -49,7 +50,7 @@ function p_pulisci(){
 	document.getElementById("email_error").innerHTML = "";
 }
 
-function p_valida{
+function valida{
 	var con=true;
 	var checkIn = document.getElementById("check-in");
 	var checkOut = document.getElementById("check-out");

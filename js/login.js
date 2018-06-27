@@ -5,11 +5,11 @@ function login(){
 	user=document.getElementById("email").value;
 	pass=document.getElementById("password").value;
 	if(!patternUSER.test(user)){
-		document.getElementById("errore_mail").innerHTML= "Email " +email+" non valido! ";
+		document.getElementById("errore_mail").innerHTML= "Email " +email+" non valida! ";
 		con=false;
 	}
 	if(pass===""){
-		docment.getElementById("erroreP").innerHTML= "Inserire la password ";
+		document.getElementById("errore_pass").innerHTML= "Inserire la password! ";
 		con=false;
 	}
 	return con;

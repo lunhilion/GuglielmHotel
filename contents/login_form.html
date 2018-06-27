@@ -1,16 +1,18 @@
-
+<script type="text/javascript" src="./js/login.js"></script>
 <div class="tile">
     <div class="inner">
         <h2>PANNELLO DI CONTROLLO</h2>
         <h3>LOGIN</h3>
-        <form method="POST" >
+        <form method="POST" onsubmit="return login();">
           <div id="login-form" class="column">
             <label>Email</label><br>
-            <input type="text" name="email"/><br>
+            <input type="text" id="email" name="email"/><br>
             <label>Password</label><br>
-            <input type="password" name="password"/><br>
+            <input type="password" id="password" name="password"/><br>
             <button type="submit" name="accedi" value="Accedi" id="login-btn">Accedi</button>
         </div>
         </form>
     </div>
+    <div id="errore_mail" class="val_error"></div>
+    <div id="errore_pass" class="val_error"></div>
 </div>
