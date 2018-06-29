@@ -1,19 +1,19 @@
-<script type="text/javascript" scr="./js/controlli.js"></script>
+<script type="text/javascript" src="javascript/controlli.js"></script>
 <div class="tile">
 	<div class="inner">
 		<h2>PRENOTA</h2>
 				{errori}
 	</div>
 </div>
-<form  method="POST" onsubmit="return pv();">	
+<form method="POST" onsubmit="return checkPrenota();">
 <div class="tile BG-gray" id="prenota-title">
 <div class="inner" id="prenotation-box">
 			<div class="column">
 				<h3> Quanto vorresti soggiornare qui? </h3>
 				<label>Check-In</label><br>
-				<input type="text" id="check-in" name="check-in" placeholder="GG-MM-AAAA" {check-in}/><br>
+				<input type="text" name="check-in" id="check-in" placeholder="GG-MM-AAAA" {check-in}/><br>
 				<label>Check-Out</label><br>
-				<input type="text" id="check-out" name="check-out" placeholder="GG-MM-AAAA" {check-out}/><br>
+				<input type="text" name="check-out" id="check-out" placeholder="GG-MM-AAAA" {check-out}/><br>
 			</div>
 			<div class="column select-box">
 				<h3> Che stanza vuoi? </h3>
@@ -26,11 +26,12 @@
 			</div>
 			<div class="column select-box">
 				<h3> A che nome vuoi prenotare? </h3>
-				<input type="text" id="guest-name" name="guest-name" placeholder="Nome Cognome" id="input-name" /> <br>
-				<input type="text" id="guest-mail" name="guest-mail" placeholder="E-mail" /> <br>
+				<input type="text" name="guest-name" placeholder="Nome Cognome" id="input-name"/> <br>
+				<input type="text" name="guest-mail" placeholder="E-mail" id="guest-mail"/> <br>
 			</div>
 </div>
 </div>
+<span id="errori"></span>
 <div class="tile">
 	<div class="inner">
 		<div class="column" id="note-box">
@@ -42,9 +43,9 @@
 				<li> <strong>INFO</strong>: per chiarimenti o esigenze particolari, contattateci a <a href="contatti.php#contatti-title"> questa pagina </a> </li>
 			</ul>
 		</div>
-		<button type="submit" name="prenota" value="prenota" id="booking-submit-button">INVIA LA PRENOTAZIONE</button>
+		<button type="submit" name="prenota" value="prenota" id="booking-submit-button" >INVIA LA PRENOTAZIONE</button>
 	</div>
 </div>
 </form>
-<p id="errore_mail" ></p>
-<p id="errore_pass"></p>
+
+

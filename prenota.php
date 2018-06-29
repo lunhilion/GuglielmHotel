@@ -1,5 +1,4 @@
 <?php
-  //require_once('js/controlli.js');
   require_once('php/functions.php');
   $mod=array('{check-in}' => '','{check-out}' => '','{errori}' => '');
   if(isset($_SESSION['Preventivo']))
