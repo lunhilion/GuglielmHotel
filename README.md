@@ -5,21 +5,18 @@
 ### Generali:
 - [ ] aggiungere tab index (?)
 - [ ] supporto per screenreader
-- [ ] aggiungere attributo lang=EN dove serve
 - [ ] rendere accessibile tabella cpanel
 - [ ] rendere accessibili caratteri speciali
-- [ ] controllare input javascript
-- [ ] hamburger (?)
 - [ ] sostituire i px nei css
 
 
 ### Silvia:
 - [ ] sistemare css print
 - [ ] relazione
+- [ ] controllare input javascript
 
 
 ### Erny:
-- [ ] sistemare bounds disponibilita' php
 - [ ] validare pagine
 
 

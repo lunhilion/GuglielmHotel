@@ -1,20 +1,49 @@
     <div id="booking-box">
         <div class="inner">
-        <div id="booking-form">
-            <form action="prenota.php" method="GET">
-                <div class="form-element">
-                  <label>Check-In</label>
-                  <input type="text" name="check-in" placeholder="GG-MM-AAAA" />
-                </div>
-                <div class="form-element">
-                  <label>Check-Out</label>
-                  <input type="text" name="check-out" placeholder="GG-MM-AAAA" />
-                </div>
-                <button type="submit" name="submit" value="submit">PRENOTA ORA</button>
-            </form>
+            <div id="booking-form">
+                <form action="prenota.php" method="GET">
+                    <div class="form-element">
+                        <label lang="en">Check-In</label>
+                        <input type="text" name="check-in" placeholder="GG-MM-AAAA" />
+                    </div>
+                    <div class="form-element">
+                        <label lang="en">Check-Out</label>
+                        <input type="text" name="check-out" placeholder="GG-MM-AAAA" />
+                    </div>
+                    <button type="submit" name="submit" value="submit">PRENOTA ORA</button>
+                </form>
+            </div>
         </div>
+        <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="img/camera1.png" alt="camera singola classica"/>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="img/camera_doppia.png" alt="camera doppia classica"/>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/camera2.png" alt="camera superior"/>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/camera3.png" alt="suite"/>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div id="dots">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
         </div>
-    </div>
     <div class="tile">
       <div class="inner">
           <h2>PERCHÈ DORMIRE DA NOI?</h2>
@@ -43,7 +72,7 @@
             </div>
             <div class="column-sm">
                 <img alt="Logo Wi-Fi" src="img/icon-wifi.png">
-                <p>Wi-Fi</p>
+                <p lang="en">Wi-Fi</p>
             </div>
             <div class="column-sm">
                 <img alt="Logo Lavanderia" src="img/icon-laundry.png">
