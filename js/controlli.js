@@ -133,13 +133,17 @@ function checkData(){
 }
 
 function checkPrenota(){
-	var errori = checkData("check-in") + checkData("check-out") + checkNomeCognome("input-name") + checkEmail("guest-email");
+    if(checkData("check-in") & checkData("check-out") & checkNomeCognome("input-name") & checkEmail("guest-email")){
+        document.getElementById("errori").innerHTML = "<ul>" + errori + "</ul>";
+        return true;
+    }
+    else
+        return false;
+	/*var errori = checkData("check-in") + checkData("check-out") + checkNomeCognome("input-name") + checkEmail("guest-email");
 	if(errori){
 		document.getElementById("errori").innerHTML = "<ul>" + errori + "</ul>";
 		return false;
 	}
-	return true;
+	return true;*/
 }
-
-
 
