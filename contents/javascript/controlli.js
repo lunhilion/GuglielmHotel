@@ -29,9 +29,9 @@ function pulisci(){
 
 function checkNomeCognome(){
     var nomeCognome = document.getElementById("input-name");
-    //var patternNC = /^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$/;
-    var patternNC=/^[a-zA-Z\s]*$/;
-    if(nomeCognome.value===""){
+    var patternNC = /^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$/;
+    //var patternNC=/^[a-zA-Z\s]*$/;
+    if(nomeCognome ==""){
         document.getElementById("errore_nomeCognome").innerHTML= "Campo dati nome e cognome vuoti! ";
         return false;
     }
@@ -46,19 +46,18 @@ function checkNomeCognome(){
 function checkEmail(){
     var con=true;
     var email = document.getElementById("guest-email");
-    var text = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    var text = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var patternEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
-    //var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(email.value == ""){
+    if(email.value ===""){
         document.getElementById("errore_email").innerHTML= "Campo email non deve essere vuoto! ";
         return false;
         }
     else
     {
-        if(!textEmail.test(email.value)){
+        if(!text.test(email.value)){
             document.getElementById("errore_email").innerHTML= "Email "+ email.value + " non valida! ";
             con = false;
-            return;
+            
         }
     }
     return true;
@@ -167,7 +166,7 @@ function checkPrenota(){
 function valida(){
     pulisci();
     var con=true;
-    var nomeCognome = document.getElementById("input-name");
+    var nomeCognome = document.getElementById("input-name").value;
     var email = document.getElementById("guest-mail").value;
     var checkIn = document.getElementById("check-in");
     var checkOut = document.getElementById("check-out");
@@ -182,11 +181,18 @@ function valida(){
         document.getElementById("errore_checkOut").innerHTML= "Data di partenza non valida! ";
         con = false;
     }
-    if(!patternNC.test(nomeCognome.value)){
-        document.getElementById("errore_nomeCognome").innerHTML= "In quale universo uno si chiama cosi! ";
+    if(nomeCognome===""){
+        document.getElementById("errore_nomeCognome").innerHTML= "Campo nome e Cognome non può essere vuoto! ";
         con = false;
     }
-    if( email==="" ){
+    else
+    {
+        if(!patternNC.test(nomeCognome.value)){
+            document.getElementById("errore_nomeCognome").innerHTML= "In quale universo uno si chiama cosi! ";
+            con = false;
+            }
+        }
+    if(email==="" ){
         document.getElementById("errore_email").innerHTML= "Campo Email non può essere vuoto! ";
         return false;
     }else
