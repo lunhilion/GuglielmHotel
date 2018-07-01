@@ -4,16 +4,13 @@
 ## Cose da fare
 ### Generali:
 - [ ] aggiungere tab index (?)
-- [ ] supporto per screenreader
-- [ ] rendere accessibile tabella cpanel
-- [ ] rendere accessibili caratteri speciali
 - [ ] sostituire i px nei css
+- [ ] controllare input javascript
 
 
 ### Silvia:
 - [ ] sistemare css print
 - [ ] relazione
-- [ ] controllare input javascript
 
 
 ### Erny:
@@ -23,3 +20,5 @@
 ## Link Validatori
 1. https://www.totalvalidator.com/
 2. http://app.validator.pro/
+
+
