@@ -19,61 +19,54 @@ function login(){
 	}
 	return con;
 }
-/*
-function prenota(){
-   //pulisci();//pulisco i p ogni volta che l'utente cerca di inserire i dati
-   if(emptyForm()){//verifico se tutti i campi sono diversi da null
-       if(valida()){
-            return true;//funzione per validare i campi dati
-       }
-       else{
-           return false;
-       }
-    }
-    return false;//altrimenti ritorna false se mancano i campi dati
-}
-
-function emptyForm(){
-    var checkIn = document.getElementByName("check-in");
-    var checkOut = document.getElementByName("check-out");
-    var nomeCognome = document.getElementByName("input-name");
-    var email = document.getElementByName("guest-email");
-    var con=true;
-    if(checkIn.value===""){
-        document.getElementById("checkIn_error").innerHTML = "Data di arrivo è richiesta! ";
-        con=false;
-    }
-    if(checkOut.value===""){
-        document.getElementById("checkOut_error").innerHTML = "Data di partenza è richiesta!";
-        con=false;
-    }
-    if(nomeCognome.value===""){
-        document.getElementById("nomeCognome_error").innerHTML = "Il nome e cognome è richiesto! ";
-        con=false;
-    }
-    if(email.value===""){
-        document.getElementById("email_error").innerHTML = "L'email è richiesta! ";
-        con=false;
-    }
-    return con;
-}
 
 function pulisci(){
-    document.getElementById("checkIn_error").innerHTML = "";
-    document.getElementById("checkOut_error").innerHTML = "";
-    document.getElementById("nomeCognome_error").innerHTML = "";
-    document.getElementById("email_error").innerHTML = "";
+    document.getElementById("errore_checkIn").innerHTML = "";
+    document.getElementById("errore_checkOut").innerHTML = "";
+    document.getElementById("errore_nomeCognome").innerHTML = "";
+    document.getElementById("errore_email").innerHTML = "";
 }
 
-function valida(){
+function checkNomeCognome(){
+    var nomeCognome = document.getElementById("input-name");
+    //var patternNC = /^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$/;
+    var patternNC=/^[a-zA-Z\s]*$/;
+    if(nomeCognome.value===""){
+        document.getElementById("errore_nomeCognome").innerHTML= "Campo dati nome e cognome vuoti! ";
+        return false;
+    }
+    else   
+        if(!patternNC.test(nomeCognome.value)){
+            document.getElementById("errore_nomeCognome").innerHTML= "In quale universo uno si chiama cosi! ";
+            return false;
+        }
+    return true;
+}
+
+function checkMail(){
     var con=true;
-    var nomeCognome = document.getElementByName("guest-name");
-    var email = document.getElementByName("guest-email");
-    var checkIn = document.getElementByName("check-in");
-    var checkOut = document.getElementByName("check-out");
+    var email = document.getElementById("guest-email");
+    var patternEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
+    //var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(email.value===""){
+        document.getElementById("errore_email").innerHTML= "Campo email non deve essere vuoto! ";
+        con= false;
+        }
+    else
+    {
+        if(!patternEmail.test(email.value)){
+            document.getElementById("errore_email").innerHTML= "Email "+ email.value + " non valida! ";
+            con= false;
+        }
+    }
+    return true;
+}
+
+function checkData(){
+    var con=true;
+    var checkIn = document.getElementById("check-in");
+    var checkOut = document.getElementById("check-out");
     var patternCheck = /^[0-9]{2}\-[0-9]{2}\-[0-9]{4}$/;
-    var patternNC = /^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$/;
-    var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!patternCheck.test(checkIn.value)){
         document.getElementById("errore_checkIn").innerHTML= "Data di arrivo non valida! ";
         con=false;
@@ -82,54 +75,84 @@ function valida(){
         document.getElementById("errore_checkOut").innerHTML= "Data di partenza non valida! ";
         con=false;
     }
-    if(!patternNC.test(nomeCognome.value)){
-        document.getElementById("errore_nomeCognome").innerHTML= "In quale universo uno si chiama "+nomeCognome.value+" non valido! ";
+    return con;
+}
+function checkPrenota(){
+    pulisci();
+    if(checkData())
+    {
+        if(checkNomeCognome())
+        {
+            if(checkMail())
+                return true;
+            else
+                return false;
+        }else
+            return false;
+    }
+    else
+        return false;
+}
+/*
+function emptyForm(){
+    var checkIn = document.getElementById("check-in");
+    var checkOut = document.getElementById("check-out");
+    var nomeCognome = document.getElementById("input-name");
+    var email = document.getElementById("guest-email");
+    var con=true;
+    if(checkIn.value===""){
+        document.getElementById("errore_checkIn").innerHTML = "Data di arrivo è richiesta! ";
         con=false;
     }
-    if(!patternEmail.test(email.value)){
-        document.getElementById("errore_email").innerHTML= "Email "+ email.value + " non valida! ";
+    if(checkOut.value===""){
+        document.getElementById("errore_checkOut").innerHTML = "Data di partenza è richiesta!";
+        con=false;
+    }
+    if(nomeCognome.value===""){
+        document.getElementById("errore_nomeCognome").innerHTML = "Il nome e cognome è richiesto! ";
+        con=false;
+    }
+    if(email.value===""){
+        document.getElementById("errore_email").innerHTML = "L'email è richiesta! ";
         con=false;
     }
     return con;
 }
 
-*/
-function checkNomeCognome(){
-	var con=true;
-	var tag=document.getElementById("input-name").value;
+function checkNomeCognome(par, nome){
+	var tag=document.getElementById(par);
 	var ctrl=/^[a-zA-Z ]+$/;
-	if(tag.value==null || tag.value=="" || tag.value.length < 3 || tag.value.length > 20 || !crtl.test(tag.value))
-		document.getElementById("errori").innerHTML= "<li>Nome e Cognome non inseriti correttamente</li>";
-		con=false;
-	return con;
+    var string =""
+	if (tag.value == null || tag.value == "" || /^[ ]+$/.test(tag.value) || tag.value.length < 3 || tag.value.length > 20)
+        string += "<li>Il campo "+nome+" deve contenere tra 3 e 20 caratteri</li>";
+
+    if(!string && !ctrl.test(tag.value))
+        string += "<li>Il campo "+nome+" non possono contenere caratteri speciali</li>";
+    return string;
 }
 
-function checkEmail(){
-	var con=true;
-	var tag=document.getElementById("guest-mail").value;
-	var ctrl = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    if (tag.value == null || tag.value == "" || /^[ ]+$/.test(tag.value)){
-        document.getElementById("errori").innerHTML= "<li>Il campo email non può essere vuoto</li>";
-    	con=false;
-    }
-    if(!ctrl.test(tag.value)){
-    	document.getElementById("errori").innerHTML= "<li>Il campo email non è inserito correttamente</li>";
-    	con=false;
-    }
-    return con;
+function checkEmail(par){
+	var tag= document.getElementById(par);
+    var string="";
+    var ctrl = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    if (tag.value == "" || /^[ ]+$/.test(tag.value))
+        string +=  "<li>Il campo email non può essere vuoto</li>";
+    
+    if(!string && !ctrl.test(tag.value))
+        string+= "<li>il campo email non deve conterene caratteri speciali oltre la chiocciola e il punto</li>";
+
+    return string;
 }
 
-function checkData(){
-	var con=true;
-    var tag1 = document.getElementById("check-in").value;
-    var tag2 = document.getElementById("check-out").value;     
+function checkData(par){
+    var tag = document.getElementById(par);    
+    var string = "";
     var ctrl = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
 
-    if(!ctrl.test(tag1.value) || !ctrl.test(tag2.value)){
-        document.getElementById("errori").innerHTML= "<li>Formato data non valido, il formato deve essere di tipo gg/mm/aaaa</li>";
-    	con=false
-    }
-    return con;
+    if(!ctrl.test(tag.value))
+        string += "<li>Formato data non valido, il formato deve essere di tipo gg/mm/aaaa</li>";
+
+    return string;
 }
 
 function checkPrenota(){
@@ -141,5 +164,31 @@ function checkPrenota(){
 	return true;
 }
 
-
+function valida(){
+    var nomeCognome = document.getElementById("input-name");
+    var email = document.getElementById("guest-email");
+    var checkIn = document.getElementById("check-in");
+    var checkOut = document.getElementById("check-out");
+    var patternCheck = /^[0-9]{2}\-[0-9]{2}\-[0-9]{4}$/;
+    var patternNC = /^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$/;
+    var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!patternCheck.test(checkIn.value)){
+        document.getElementById("errore_checkIn").innerHTML= "Data di arrivo non valida! ";
+        return false;
+    }
+    if(!patternCheck.test(checkOut.value)){
+        document.getElementById("errore_checkOut").innerHTML= "Data di partenza non valida! ";
+        return false;
+    }
+    if(!patternNC.test(nomeCognome.value)){
+        document.getElementById("errore_nomeCognome").innerHTML= "In quale universo uno si chiama cosi! ";
+        return false;
+    }
+    if(email.value==="" || !patternEmail.test(email.value)){
+        document.getElementById("errore_email").innerHTML= "Email "+ email.value + " non valida! ";
+        return false;
+    }
+    return true;
+}
+*/
 

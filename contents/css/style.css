@@ -694,3 +694,11 @@ h3{
   }
 }
 
+.val_error{
+  display: block;
+  color: red;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
