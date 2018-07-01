@@ -29,6 +29,18 @@ p, ul, span {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+#header {
+	text-align:center;
+}
+
+#logo {
+	display:none;
+}
+
+.map {
+	display:none;
+}
+
 #breadcrumb {
   padding: 0.4cm;
   font-size: 14pt;
