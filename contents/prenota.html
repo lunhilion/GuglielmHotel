@@ -1,13 +1,18 @@
 <script type="text/javascript" src="./js/controlli.js"></script>
+	<span id="errore_checkIn" class="val_error"></span>
+	<span id="errore_checkOut" class="val_error"></span>
+	<span id="errore_nomeCognome" class="val_error"></span>
+	<span id="errore_email" class="val_error"></span>
 <div class="tile">
 	<div class="inner">
 		<h2>PRENOTA</h2>
-				{errori}
+			{errori}
 	</div>
 </div>
-<form method="POST" action="">
+<form action="./prenota.php" onsubmit="return checkPrenota()" method="POST">
 <div class="tile BG-gray" id="prenota-title">
 <div class="inner" id="prenotation-box">
+		
 			<div class="column">
 				<h3> Quanto vorresti soggiornare qui? </h3>
 				<label>Check-In</label><br>
@@ -31,11 +36,6 @@
 			</div>
 </div>
 </div>
-<span id="errori"></span>
-<span id="errore_checkIn"></span>
-<span id="errore_checkOut"></span>
-<span id="nomeCognome_error"></span>
-<span id="email_error"></span>
 <div class="tile">
 	<div class="inner">
 		<div class="column" id="note-box">
@@ -47,7 +47,7 @@
 				<li> <strong>INFO</strong>: per chiarimenti o esigenze particolari, contattateci a <a href="contatti.php#contatti-title"> questa pagina </a> </li>
 			</ul>
 		</div>
-		<button type="submit" name="prenota" value="prenota" id="booking-submit-button" onclick="return checkPrenota()">INVIA LA PRENOTAZIONE</button>
+		<button type="submit" name="prenota" value="prenota" id="booking-submit-button">INVIA LA PRENOTAZIONE</button>
 	</div>
 </div>
 </form>
