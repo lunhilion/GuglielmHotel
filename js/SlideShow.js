@@ -3,7 +3,6 @@ showSlides(slideIndex);
 */
 
 var slideIndex = 0;
-showSlides();
 
 function plusSlides(n) {
   showSlides(slideIndex += n);

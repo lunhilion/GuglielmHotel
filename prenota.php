@@ -1,6 +1,6 @@
 <?php
   require_once('php/functions.php');
-  $mod=array('{check-in}' => '','{check-out}' => '','{errori}' => '');
+  $mod=array('{check-in}' => '','{check-out}' => '','{errori}' => '','{select-stanza}' => '');
   if(isset($_SESSION['Preventivo']))
     header("location: riepilogo.php");
 
@@ -8,6 +8,11 @@
     $mod['{check-in}']='value="'.$_GET['check-in'].'"';
     $mod['{check-out}']='value="'.$_GET['check-out'].'"';
   }
+  if(isset($_GET['TipoStanza']))
+    $mod['{select-stanza}'] = buildStanzaSelector($_GET['TipoStanza']);
+  else
+    $mod['{select-stanza}'] = buildStanzaSelector("A");
+
   if(isset($_POST['prenota'])){
     $errore="";
     if(!isset($_POST['check-in']) || !checkData($_POST['check-in'])) {
@@ -43,6 +48,15 @@
     if($errore)
     {
       $mod['{errori}'] = '<ul class="error">'.$errore.'</ul>';
+      if((isset($_POST['guest-mail'])))
+        $mod['{guest-mail}']='value="'.$_POST['guest-mail'].'"';
+        if((isset($_POST['guest-mail'])))
+        $mod['{guest-name}']='value="'.$_POST['guest-name'].'"';
+        if((isset($_POST['guest-mail'])))
+        $mod['{check-in}']='value="'.$_POST['check-in'].'"';
+        if((isset($_POST['guest-mail'])))
+        $mod['{check-out}']='value="'.$_POST['check-out'].'"';
+        
 
     }
     else {

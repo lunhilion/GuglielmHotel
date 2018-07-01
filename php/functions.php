@@ -164,6 +164,18 @@ function getNomeStanza($TipoStanza) {
     return $row[0];
 }
 
+function getStanze() {
+    $result = connection::QueryRead("SELECT * FROM appartamenti ");
+    
+    return $result;
+}
+
+function getDisp($TipoStanza) {
+    $result = connection::QueryRead("SELECT da, a FROM prezzi_disponibilita WHERE idStanza='$TipoStanza'");
+    $row = mysqli_fetch_row($result);
+    return $row;
+}
+
 function getCostoStanza($TipoStanza) {
     $result = connection::QueryRead("SELECT costoGiornaliero FROM prezzi_disponibilita WHERE idStanza='$TipoStanza'");
     $row = mysqli_fetch_row($result);
@@ -243,5 +255,25 @@ function checkIfCurrentDate($data) {
     $arrivo = new DateTime($data);
     $attuale = new DateTime(date("Y-m-d"));
     return $arrivo>=$attuale;
+}
+
+function buildStanzaSelector($tipoStanza) {
+    $page= '<select name="TipoStanza">';
+    $res= getStanze();
+    while($rows = mysqli_fetch_row($res)){
+        if($rows[0]==$tipoStanza)
+            $page = $page.'<option value="'.$rows[0].'" selected> '.$rows[1].' </option>';
+        else
+            $page = $page.'<option value="'.$rows[0].'" > '.$rows[1].' </option>';
+    }
+    $page=$page.'</select>';
+
+    /*'<option value="A"> Singola classica </option>
+    <option value="B"> Doppia classica </option>
+    <option lang="en" value="C"> Superior </option>
+    <option lang="en" value="D"> Suite </option>
+    </select>;'*/
+    return $page;
+
 }
 ?>

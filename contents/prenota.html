@@ -22,17 +22,12 @@
 			</div>
 			<div class="column select-box">
 				<h3> Che stanza vuoi? </h3>
-				<select name="TipoStanza">
-				<option value="A"> Singola classica </option>
-				<option value="B"> Doppia classica </option>
-				<option lang="en" value="C"> Superior </option>
-				<option lang="en" value="D"> Suite </option>
-			</select>
+				{select-stanza}
 			</div>
 			<div class="column select-box">
 				<h3> A che nome vuoi prenotare? </h3>
-				<input type="text" name="guest-name" placeholder="Nome Cognome" id="input-name"/> <br>
-				<input type="text" name="guest-mail" placeholder="E-mail" id="guest-mail"/> <br>
+				<input type="text" name="guest-name" placeholder="Nome Cognome" id="input-name" {guest-name}/> <br>
+				<input type="text" name="guest-mail" placeholder="E-mail" id="guest-mail" {guest-mail}/> <br>
 			</div>
 </div>
 </div>
