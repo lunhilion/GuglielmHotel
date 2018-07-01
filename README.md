@@ -6,15 +6,13 @@
 - [ ] aggiungere tab index (?)
 - [ ] sostituire i px nei css
 - [ ] controllare input javascript
+- [ ] validare pagine
 
 
 ### Silvia:
 - [ ] sistemare css print
 - [ ] relazione
 
-
-### Erny:
-- [ ] validare pagine
 
 
 ## Link Validatori

@@ -1,4 +1,4 @@
-
+﻿
 function login(){
 	var user, pass;
 	var con=true;
@@ -37,7 +37,7 @@ function checkNomeCognome(){
     }
     else   
         if(!patternNC.test(nomeCognome.value)){
-            document.getElementById("errore_nomeCognome").innerHTML= "In quale universo uno si chiama cosi! ";
+            document.getElementById("errore_nomeCognome").innerHTML= "Errore nell'inserimento del nome ";
             return false;
         }
     return true;
