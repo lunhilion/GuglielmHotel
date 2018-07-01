@@ -43,20 +43,22 @@ function checkNomeCognome(){
     return true;
 }
 
-function checkMail(){
+function checkEmail(){
     var con=true;
     var email = document.getElementById("guest-email");
+    var text = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     var patternEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
     //var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(email.value===""){
+    if(email.value == ""){
         document.getElementById("errore_email").innerHTML= "Campo email non deve essere vuoto! ";
-        con= false;
+        return false;
         }
     else
     {
-        if(!patternEmail.test(email.value)){
+        if(!textEmail.test(email.value)){
             document.getElementById("errore_email").innerHTML= "Email "+ email.value + " non valida! ";
-            con= false;
+            con = false;
+            return;
         }
     }
     return true;
@@ -79,20 +81,12 @@ function checkData(){
 }
 function checkPrenota(){
     pulisci();
-    if(checkData())
-    {
-        if(checkNomeCognome())
-        {
-            if(checkMail())
-                return true;
-            else
-                return false;
-        }else
-            return false;
-    }
+    if(checkData() && checkNomeCognome() && checkEmail())
+        return true;
     else
         return false;
 }
+
 /*
 function emptyForm(){
     var checkIn = document.getElementById("check-in");
@@ -167,12 +161,14 @@ function checkPrenota(){
 		document.getElementById("errori").innerHTML = "<ul>" + errori + "</ul>";
 		return false;
 	}
-	return true;*/
+	return true;
 }
-
+*/
 function valida(){
+    pulisci();
+    var con=true;
     var nomeCognome = document.getElementById("input-name");
-    var email = document.getElementById("guest-email");
+    var email = document.getElementById("guest-mail").value;
     var checkIn = document.getElementById("check-in");
     var checkOut = document.getElementById("check-out");
     var patternCheck = /^[0-9]{2}\-[0-9]{2}\-[0-9]{4}$/;
@@ -180,21 +176,26 @@ function valida(){
     var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!patternCheck.test(checkIn.value)){
         document.getElementById("errore_checkIn").innerHTML= "Data di arrivo non valida! ";
-        return false;
+        con = false;
     }
     if(!patternCheck.test(checkOut.value)){
         document.getElementById("errore_checkOut").innerHTML= "Data di partenza non valida! ";
-        return false;
+        con = false;
     }
     if(!patternNC.test(nomeCognome.value)){
         document.getElementById("errore_nomeCognome").innerHTML= "In quale universo uno si chiama cosi! ";
-        return false;
+        con = false;
     }
-    if(email.value==="" || !patternEmail.test(email.value)){
-        document.getElementById("errore_email").innerHTML= "Email "+ email.value + " non valida! ";
+    if( email==="" ){
+        document.getElementById("errore_email").innerHTML= "Campo Email non può essere vuoto! ";
         return false;
-    }
-    return true;
+    }else
+        if(!patternEmail.test(email.value)){
+            document.getElementById("errore_email").innerHTML= "Email "+ email + " non valida! ";
+            return false;
+        }
+    else
+        return con;
 }
 
 
