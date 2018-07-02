@@ -1,0 +1,20 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {section}{\numberline {1}Abstract}{2}{section.1}
+\contentsline {section}{\numberline {2}Utenti destinatari}{2}{section.2}
+\contentsline {section}{\numberline {3}Accessibilit\IeC {\`a}}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}Separazione tra contenuto, presentazione e struttura}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Screen reader}{2}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Colori}{2}{subsection.3.3}
+\contentsline {section}{\numberline {4}Fasi di Sviluppo}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Sviluppo generale}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Divisione dei compiti}{3}{subsection.4.2}
+\contentsline {section}{\numberline {5}Gerarchia dei File}{4}{section.5}
+\contentsline {section}{\numberline {6}Presentazione}{4}{section.6}
+\contentsline {subsection}{\numberline {6.1}style.css}{4}{subsection.6.1}
+\contentsline {section}{\numberline {7}Comportamento}{4}{section.7}
+\contentsline {section}{\numberline {8}Rappresentazione dei Dati}{5}{section.8}
+\contentsline {section}{\numberline {9}Gestione dei Dati}{5}{section.9}
+\contentsline {section}{\numberline {10}Validazione e test d'utilizzo}{5}{section.10}
+\contentsline {subsection}{\numberline {10.1}Utilizzo}{6}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Password}{6}{subsection.10.2}
