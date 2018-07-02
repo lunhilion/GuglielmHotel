@@ -101,6 +101,10 @@
   overflow: auto;
 }
 
+#mobilenavbar li a:visited {
+  color: #f08080;
+}
+
 #mobilenavbar {
   display: block;
   visibility: hidden;
