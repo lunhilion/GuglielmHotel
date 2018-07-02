@@ -167,12 +167,13 @@ function valida(){
     pulisci();
     var con=true;
     var nomeCognome = document.getElementById("input-name").value;
-    var email = document.getElementById("guest-mail").value;
+    var email = document.getElementById("guest-mail");
     var checkIn = document.getElementById("check-in");
     var checkOut = document.getElementById("check-out");
     var patternCheck = /^[0-9]{2}\-[0-9]{2}\-[0-9]{4}$/;
     var patternNC = /^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$/;
-    var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var patternEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    //var patternEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!patternCheck.test(checkIn.value)){
         document.getElementById("errore_checkIn").innerHTML= "Data di arrivo non valida! ";
         con = false;
@@ -197,9 +198,10 @@ function valida(){
         return false;
     }else
         if(!patternEmail.test(email.value)){
-            document.getElementById("errore_email").innerHTML= "Email "+ email + " non valida! ";
+            document.getElementById("errore_email").innerHTML= "Email "+ email.value + " non valida! ";
+            con = false;
             return false;
-        }
+        }    
     else
         return con;
 }
