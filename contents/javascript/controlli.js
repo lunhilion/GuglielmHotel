@@ -2,22 +2,26 @@
 function login(){
 	var user, pass;
 	var con=true;
-	var patternUSER=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	user=document.getElementById("email").value;
+	var patternUSER=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	user=document.getElementById("email");
 	pass=document.getElementById("password").value;
-	if(user===""){
-		document.getElementById("errore_mail").innerHTML= "Inserire la email! ";
-		con=false;
-	}
-    if(pass===""){
+	if(pass===""){
         document.getElementById("errore_pass").innerHTML= "Inserire la password! ";
-        con=false;
+        con = false;
     }
-	if(!patternUSER.test(user.value)){
-		document.getElementById("errore_mail").innerHTML= "Email "+ user + " non valida! ";
-		con=false;
-	}
-	return con;
+	if(user==="" ){
+        document.getElementById("errore_email").innerHTML= "Campo Email non può essere vuoto! ";
+        con = false;
+    }
+    else
+    {
+        if(!patternUSER.test(user.value)){
+            document.getElementById("errore_email").innerHTML= "Email "+ user.value + " non valida! ";
+            con = false;
+            return false;
+        }
+    }   
+    return con;
 }
 
 function pulisci(){

@@ -1,8 +1,4 @@
 \section{Comportamento} %controlli js
 Per risolvere le criticità dovute all'inserimento dei dati in input nei form della prenotazione delle camere, è stata presa in considerazione la tecnologia JavaScript: volevamo rendere la validazione dei form e l'eventuale seganalazione di eventuali errori immediata, per consentire all'utente di risolvere tutte le sue esigenze di iterazione in maniera rapida.
 Sono stati creati i file .js che contengono le funzioni JavaScript per la validazione dei form presenti sul sito, prima di inviare la richiesta al server MySQL. La validazione tramite Javascript viene eseguita nei seguenti form: Login e Prenotazione. Ogni volta che una di queste form viene compilata e i suoi dati inviati, viene generato l'vento onsubmit che ritorna il valore della corrispondente funzione di valutazione Javascript; se questo valore è "false" significa che soso stati rilevati uno o più errori, che vengono visulaizzati nell'apposita area, in questo caso l'invio al server è abortito. Nel caso contrario la funzione ritorna true e quindi il form viene inviato al server.
-Nello specifico:
-\begin{itemize}
-	\item login.js contine la funzione che valida il form per il login Amministratore, viene controllato che la username inserita sia conforme e che la password sia stat effettivamente inserita.
-	\item controlli.js contiene tutte le funzioni per validare le form per la prenotazione delle camere.
-\end{itemize}
+Nello specifico, il file "controlli.js	contine la funzione che valida il form per il login Amministratore, viene controllato che la username inserita sia conforme e che la password sia stata effettivamente inserita, e poi tutte le funzioni per validare le form per la prenotazione delle camere.
