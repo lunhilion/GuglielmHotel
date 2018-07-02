@@ -1,6 +1,6 @@
 <?php
   require_once('php/functions.php');
-  $mod=array('{check-in}' => '','{check-out}' => '','{errori}' => '','{select-stanza}' => '');
+  $mod=array('{check-in}' => '','{check-out}' => '','{errori}' => '','{select-stanza}' => '','{guest-name}' => '','{guest-mail}' => '');
   if(isset($_SESSION['Preventivo']))
     header("location: riepilogo.php");
 

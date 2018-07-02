@@ -1,0 +1,1 @@
+ErrorDocument 404 http://localhost/GuglielmHotel/404.php
