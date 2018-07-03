@@ -3,25 +3,25 @@ function login(){
 	var user, pass;
 	var con=true;
 	var patternUSER=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-	user=document.getElementById("email");
-	pass=document.getElementById("password").value;
+	user = document.getElementById("email").value;
+	pass = document.getElementById("password").value;
 	if(pass===""){
         document.getElementById("errore_pass").innerHTML= "Inserire la password! ";
         con = false;
     }
-	if(user==="" ){
+	if(user==""){
         document.getElementById("errore_email").innerHTML= "Campo Email non può essere vuoto! ";
-        con = false;
+        return false;
     }
     else
     {
         if(!patternUSER.test(user.value)){
-            document.getElementById("errore_email").innerHTML= "Email "+ user.value + " non valida! ";
-            con = false;
+            document.getElementById("errore_email").innerHTML= "Email "+ user + " non valida! ";
+            //con = false;
             return false;
         }
     }   
-    return con;
+    return true;
 }
 
 function pulisci(){
