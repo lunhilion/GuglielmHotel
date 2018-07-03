@@ -15,13 +15,13 @@ function login(){
     }
     else
     {
-        if(!patternUSER.test(user.value)){
+        if(!patternUSER.test(user)){
             document.getElementById("errore_email").innerHTML= "Email "+ user + " non valida! ";
-            //con = false;
-            return false;
+            con = false;
+            return;
         }
     }   
-    return true;
+    return con;
 }
 
 function pulisci(){
