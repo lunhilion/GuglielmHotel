@@ -88,10 +88,10 @@ function PrepareFooter($title) {
     $btn='';
     if($title=='Pannello di Controllo') {
         if(isLogin())
-            $btn='<a href="logout.php">LOGOUT</a>';
+            $btn='<a href="logout.php" tabindex="18">LOGOUT</a>';
     }
     else {
-        $btn='<a href="cp_admin.php">PANNELLO DI CONTROLLO</a>';
+        $btn='<a href="cp_admin.php" tabindex="18">PANNELLO DI CONTROLLO</a>';
     }
     $footer=file_get_contents("contents/footer.html");
     $footer=str_replace('{cpanel-btn}',$btn,$footer);

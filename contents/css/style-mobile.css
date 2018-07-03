@@ -10,10 +10,6 @@
   display: none;
 }
 
-#topScrollButton {
-  font-size: ;
-}
-
 #home-link {
   margin-right: 1em;
 }
@@ -34,9 +30,6 @@
   text-align: center;
 }
 
-/* #booking-form input, #login-form input {
-  font-size: ;
-} */
 
 .column-sm {
   width: 50%;
@@ -143,9 +136,6 @@
   height:50%;
 }
 
-#tel-link {
-  pointer-events: all;
-}
 
 #tel-link, #mail-link {
   text-decoration: none;
