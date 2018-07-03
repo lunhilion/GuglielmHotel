@@ -261,7 +261,7 @@ function checkIfCurrentDate($data) {
 }
 
 function buildStanzaSelector($tipoStanza) {
-    $page= '<select name="TipoStanza" id="TipoStanza">';
+    $page= '<select name="TipoStanza" id="TipoStanza" tabindex="10">';
     $res= getStanze();
     while($rows = mysqli_fetch_row($res)){
         if($rows[0]==$tipoStanza)
