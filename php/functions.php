@@ -15,6 +15,7 @@ function PrepareMenu($title) {
         'Contattaci'=>'contatti.php',
         'Menù'=>'#naventry-home'
     );
+    $tabindex = 2;
     $menu='<ul class="inner">';
     foreach($menuEntry as $index=>$link) {
         if($index==$title) {
@@ -25,9 +26,11 @@ function PrepareMenu($title) {
               $menu=$menu.'<li class="menu" id="naventry-menu">' . $index .
                 '<img src="img/menu-bars-icon.png" alt="Menu bars icon" class="menu-bars-icon" /></li>';
           else{
-            $menu=$menu.'<li class="menu"><a class="not-active" href="'.$link.'">'.$index.'</a></li>';
+            $menu=$menu.'<li class="menu"><a class="not-active" tabindex="'.$tabindex.'" href="'.$link.'">'.$index.'</a></li>';
+            $tabindex++;
           }
         }
+       
     }
     $menu=$menu.'</ul>';
     return $menu;
@@ -36,7 +39,7 @@ function PrepareMenu($title) {
 function PrepareHeader($title) {
     $btn='';
     if($title!='Home' && $title!='Prenota')
-        $btn='<div class="booking-button-container"><a id="booking-button" href="prenota.php">PRENOTA ORA</a></div>';
+        $btn='<div class="booking-button-container"><a id="booking-button"  tabindex="7" href="prenota.php">PRENOTA ORA</a></div>';
     $header=file_get_contents("contents/header.html");
     $header=str_replace('{booking-btn}',$btn,$header);
     return $header;
@@ -258,7 +261,7 @@ function checkIfCurrentDate($data) {
 }
 
 function buildStanzaSelector($tipoStanza) {
-    $page= '<select name="TipoStanza">';
+    $page= '<select name="TipoStanza" id="TipoStanza">';
     $res= getStanze();
     while($rows = mysqli_fetch_row($res)){
         if($rows[0]==$tipoStanza)

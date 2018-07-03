@@ -3,10 +3,6 @@
   display: none;
 }
 
-#content-box, #footer {
-
-}
-
 #info_box h2 {
   display: none;
 }
@@ -38,9 +34,9 @@
   text-align: center;
 }
 
-#booking-form input, #login-form input {
+/* #booking-form input, #login-form input {
   font-size: ;
-}
+} */
 
 .column-sm {
   width: 50%;

@@ -50,11 +50,11 @@
       $mod['{errori}'] = '<ul class="error">'.$errore.'</ul>';
       if((isset($_POST['guest-mail'])))
         $mod['{guest-mail}']='value="'.$_POST['guest-mail'].'"';
-        if((isset($_POST['guest-mail'])))
+        if((isset($_POST['guest-name'])))
         $mod['{guest-name}']='value="'.$_POST['guest-name'].'"';
-        if((isset($_POST['guest-mail'])))
+        if((isset($_POST['check-in'])))
         $mod['{check-in}']='value="'.$_POST['check-in'].'"';
-        if((isset($_POST['guest-mail'])))
+        if((isset($_POST['check-out'])))
         $mod['{check-out}']='value="'.$_POST['check-out'].'"';
         
 
